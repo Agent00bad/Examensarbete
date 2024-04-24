@@ -1,24 +1,43 @@
-<mxfile host="app.diagrams.net" modified="2024-04-24T10:11:00.359Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="w4117brEodXbxtIA48N7" version="24.2.9" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-24T10:15:54.322Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="qVHtYvP7Qr-TEJz2OTiK" version="24.2.9" type="github">
   <diagram name="Page-1" id="Zj_5y1vgphJrzyNUQwXw">
     <mxGraphModel dx="722" dy="384" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="6c_1o1SFo-wjbSi7ruj--2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6c_1o1SFo-wjbSi7ruj--1">
+        <mxCell id="6c_1o1SFo-wjbSi7ruj--2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6c_1o1SFo-wjbSi7ruj--1" target="6c_1o1SFo-wjbSi7ruj--3">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="290" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6c_1o1SFo-wjbSi7ruj--5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6c_1o1SFo-wjbSi7ruj--1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="70" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6c_1o1SFo-wjbSi7ruj--1" value="Resume User" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="370" y="40" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="6c_1o1SFo-wjbSi7ruj--4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6c_1o1SFo-wjbSi7ruj--3">
+        <mxCell id="6c_1o1SFo-wjbSi7ruj--6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6c_1o1SFo-wjbSi7ruj--3">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="230" y="210" as="targetPoint" />
+            <mxPoint x="160" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6c_1o1SFo-wjbSi7ruj--7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6c_1o1SFo-wjbSi7ruj--3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="279.9999999999999" y="160" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6c_1o1SFo-wjbSi7ruj--3" value="Work Experience" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="170" y="40" width="120" height="60" as="geometry" />
+          <mxGeometry x="160" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6c_1o1SFo-wjbSi7ruj--8" value="Relevent Experience" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6c_1o1SFo-wjbSi7ruj--9" value="Unrelevent Experience" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="160" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6c_1o1SFo-wjbSi7ruj--10" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Relevence = for the positions you are interested in &lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="130" width="120" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
