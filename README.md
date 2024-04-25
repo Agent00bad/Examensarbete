@@ -41,7 +41,7 @@ The 3 parts my thesis project will be divided into are for showcasing my archite
   </details>
 - **[Trello][trello]**
   <details>
-  Trello is a Kanban board I use for planing my project and next steps, I have decided to divide it into 4 sections, "Backlog","In Progress", "Testing" and "Done". Backlog is what is to be done, "In progress" is processes started, "Testing" is where i thing something is done but further testing is needed and "Done" is where cards that are done will be placed. Bugs and problems can still occur in the "done" section but they should at least have been thoroughly tested first. Below is a early picture of my trello board. 
+  Trello is a Kanban board I use for planing my project and next steps, I have decided to divide it into 4 sections, "Backlog","In Progress", "Testing" and "Done". Backlog is what is to be done, "In progress" is processes started, "Testing" is where i think something is done but further testing is needed and "Done" is where cards that are done will be placed. Bugs and problems can still occur in the "done" section but they should at least have been thoroughly tested first. Below is a early picture of my trello board. 
 
   ![Picture of trello board divided into 4 sections in the following order from left to right: "Backlog","In Progress", "Testing" and "Done"](./README_Pictures/TrelloLayout.png)
   </details>
