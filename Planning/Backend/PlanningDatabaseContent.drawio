@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-25T12:13:52.946Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="xNuJfSN-z8oQD4Gi6VlI" version="24.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-25T12:15:45.229Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="bQjmFGzQ9pLpiZKPG2NL" version="24.3.0" type="github">
   <diagram name="Page-1" id="Zj_5y1vgphJrzyNUQwXw">
     <mxGraphModel dx="993" dy="528" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -239,8 +239,8 @@
         <mxCell id="8cq1SQ0Ta9B3JrQxIhuY-61" value="State is if the project is abandoned, inprogress or finnished, might be removed" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="10" y="220" width="100" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="8cq1SQ0Ta9B3JrQxIhuY-62" value="&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Notes:&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;dateTime / int means one or the other&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="555" y="10" width="245" height="40" as="geometry" />
+        <mxCell id="8cq1SQ0Ta9B3JrQxIhuY-62" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Notes:&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;ul&gt;&lt;li&gt;dateTime / int means one or the other&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;ul&gt;&lt;li&gt;X / null means nullable&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="480" y="10" width="360" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
