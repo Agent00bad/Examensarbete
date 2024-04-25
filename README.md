@@ -37,7 +37,7 @@ The 3 parts my thesis project will be divided into are for showcasing my archite
 
 - **[Draw.io][Draw.io]** 
   <details>
-    Draw.io is a free and open source flowchart/diagram editing website and program that I used in mapping and planning different processes such as database logic and general brainstorming. What makes it so good other then being free is the fact it let's users save flowcharts directly to their online repositories if they want to (and many other cloud services or locally). It is also nice thanks to the many possible ways to export the charts in.
+    Draw.io is a free and open source flowchart/diagram editing website and program that I used for mapping and planning different processes such as database logic and general brainstorming. What makes it so good other then being free is the fact it let's users save flowcharts directly to their online repositories if they want to (and many other cloud services or locally). It's also possible to export the charts you make in many different format such as PNG, PDF, HTML and so on which makes it very flexible.
   </details>
 - **[Trello][trello]**
   <details>
