@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-25T12:26:16.516Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="Y5EmJ7eFxF7arwydXK0h" version="24.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-25T12:36:53.652Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="9iDWpKNwJWcoUaSD0l4t" version="24.3.0" type="github">
   <diagram name="Page-1" id="Zj_5y1vgphJrzyNUQwXw">
-    <mxGraphModel dx="1323" dy="703" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1444" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -224,7 +224,7 @@
           <mxGeometry x="10" y="1010" width="260" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8cq1SQ0Ta9B3JrQxIhuY-49" value="If implemented ideally allow markdown if there is time" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="30" y="20" width="140" height="40" as="geometry" />
+          <mxGeometry x="30" y="10" width="140" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8cq1SQ0Ta9B3JrQxIhuY-56" value="Image to represent skill" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="437.5" y="770" width="95" height="30" as="geometry" />
