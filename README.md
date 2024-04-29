@@ -25,9 +25,20 @@ The 3 parts my thesis project will be divided into are for showcasing my archite
   <details>
   <summary>Show mind map</summary>
 
-  ![mind map](./README_Pictures/Database/PlanningDatabaseContent.png)
+  ![Image of database mind map](./README_Pictures/Database/PlanningDatabaseContent.png)
   
   </details>
+
+  When i had a finished mind map i used it as a reference to make a database schema from. The database schema is what i worked from but was not guaranteede to be how to final database looked, but it was a good baseline.
+
+  <details>
+  <summary>Show database schema</summary>
+  
+  ![Picture of the database schema](DatabaseSchema.png)
+  
+  </details>
+
+  ### Execution
 
 ## Admin Portal
 ## Frontend
