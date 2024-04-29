@@ -15,6 +15,9 @@ The 3 parts my thesis project will be divided into are for showcasing my archite
   - [Content:](#content)
   - [Backend](#backend)
     - [Planing](#planing)
+    - [Execution](#execution)
+      - [database](#database)
+      - [Api](#api)
   - [Admin Portal](#admin-portal)
   - [Frontend](#frontend)
   - [Tools Used](#tools-used)
@@ -29,7 +32,7 @@ The 3 parts my thesis project will be divided into are for showcasing my archite
   
   </details>
 
-  When i had a finished mind map i used it as a reference to make a database schema from. The database schema is what i worked from but was not guaranteede to be how to final database looked, but it was a good baseline.
+  When i had a finished mind map i used it as a reference to make a database schema from. The database schema is what i worked from but was not guaranteed to be how to final database looked, but it was a good baseline.
 
   <details>
   <summary>Show database schema</summary>
@@ -39,6 +42,10 @@ The 3 parts my thesis project will be divided into are for showcasing my archite
   </details>
 
   ### Execution
+  #### database 
+  For the database I use Azures *free general purpose offer SQL server database* which is a database one tier above free, gained through a promotion making it free for 100 000 vCore seconds every month which is ideal for this applications needs.
+
+  #### Api
 
 ## Admin Portal
 ## Frontend
