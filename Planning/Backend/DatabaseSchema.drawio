@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-06T18:01:52.930Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="S373t_cYycAXuxCDB_HN" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-06T18:06:11.849Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="bQIoPWiPNeooH9gdu5m6" version="24.3.1" type="github">
   <diagram name="Page-1" id="9mkFSTUzznH25_XKm-JT">
-    <mxGraphModel dx="1000" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="875" dy="465" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -17,7 +17,7 @@
           <mxGeometry y="90" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yljysEGKnH6cfGcd8ltv-8" value="WorkExperience" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#d5e8d4;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="35" y="642" width="190" height="208" as="geometry" />
+          <mxGeometry x="35" y="642" width="190" height="234" as="geometry" />
         </mxCell>
         <mxCell id="yljysEGKnH6cfGcd8ltv-9" value="Id : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="yljysEGKnH6cfGcd8ltv-8" vertex="1">
           <mxGeometry y="26" width="190" height="26" as="geometry" />
@@ -37,11 +37,14 @@
         <mxCell id="yljysEGKnH6cfGcd8ltv-15" value="Description : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="yljysEGKnH6cfGcd8ltv-8" vertex="1">
           <mxGeometry y="156" width="190" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="yljysEGKnH6cfGcd8ltv-16" value="LogoUri : string / null" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="yljysEGKnH6cfGcd8ltv-8" vertex="1">
+        <mxCell id="_CbF72C3Zb5nok3sEXlx-19" value="Description : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="yljysEGKnH6cfGcd8ltv-8">
           <mxGeometry y="182" width="190" height="26" as="geometry" />
         </mxCell>
+        <mxCell id="yljysEGKnH6cfGcd8ltv-16" value="LogoUri : string / null" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="yljysEGKnH6cfGcd8ltv-8" vertex="1">
+          <mxGeometry y="208" width="190" height="26" as="geometry" />
+        </mxCell>
         <mxCell id="yljysEGKnH6cfGcd8ltv-17" value="ConnectedCompanies" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="10" y="880" width="200" height="198" as="geometry" />
+          <mxGeometry x="15" y="890" width="200" height="198" as="geometry" />
         </mxCell>
         <mxCell id="yljysEGKnH6cfGcd8ltv-18" value="Id : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="yljysEGKnH6cfGcd8ltv-17" vertex="1">
           <mxGeometry y="30" width="200" height="26" as="geometry" />
