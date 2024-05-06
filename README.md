@@ -50,7 +50,98 @@ The 3 parts my thesis project will be divided into are for showcasing my archite
 
   #### Api
 
-  I setup a *[ASP.NET Core C#](#tools-used) RestAPI* to transfer data with, but also to manage the database with the help of [Entity Framework](#tools-used). I the first thing i did was add all the entities to the API and connect to the database with EF (abbreviation for [Entity Framework](#tools-used)) to create all the tables. 
+  I setup a *[ASP.NET Core C#](#tools-used) RestAPI* to transfer data with, but also to manage the database with the help of [Entity Framework](#tools-used). The first thing i did was add a basic folder structure, add all the entities to the API based on the database schema and connect to the database with EF (abbreviation for [Entity Framework](#tools-used)) to create all the tables. 
+
+<details>
+  <summary>Basic folder structure</summary>
+  
+   ![Picture of folderstructure](./README_Pictures/API/FirstFolderStructure.png)
+
+</details>
+
+I created a basic ``IEntity`` interface with only an `id` fiels since every entity needs one and since it gave me more dependency injection options in the future. After I made an abstract ``BaseEntity`` class derived from the ``IEntity`` interface. The abstract class contained the `Id` property from it's interface and a ``string`` property named `Name`. The reason for this is because the majority of entities have a `Name` property so using this abstract base class for it made it faster to implement all of them, and if i'd like to change something in all of these i could do it through the abstract class.
+<details><summary>IEntity and abstract BaseEntity class</summary>
+ 
+**IEntity:**
+ ````c#
+public interface IEntity
+{
+    public Guid Id { get; set; }
+}
+ ````
+
+**BaseEntity:**
+```c#
+public class BaseEntity : IEntity
+{
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+}
+```
+</details>
+<br/>
+<details>
+<summary>Two entities inheriting IEntity and BaseEntity respectively</summary>
+
+**IEntity**
+
+```cs
+
+public class AboutEntity : IEntity
+{
+    public Guid Id { get; set; }
+  
+    public required string FirstName { get; set; }
+  
+    public required string LastName { get; set; }
+  
+    public string? MiddleNames { get; set; }
+ 
+    public DateTime BirthDate { get; set; }
+
+    public string? Description { get; set; }
+  
+    public string? ImageUri { get; set; }
+}
+
+```
+
+**BaseEntity**
+```cs
+
+public class PersonalProjectEntity : BaseEntity
+{
+    public required string Description { get; set; }
+
+    public string? Documentation { get; set; }
+  
+    public PersonalProjectStatus Status { get; set; }
+    
+    public ICollection<PersonalProjectUriEntity>? ProjectUri { get; set; }
+  
+    public ICollection<SkillEntity>? AsociatedSkills { get; set; }
+}
+
+```
+</details>
+
+</br>
+
+Some of the entities i also made some `enums` for lite the ``PersonalProjectStatus`` you can see in the above implementation of ``PersonalProjectEntity``.
+
+<details>
+<summary>Example of one enum</summary>
+
+```cs
+public enum PersonalProjectStatus
+{
+    Finished,
+    InProduction,
+    OnHold,
+    Abandoned,
+}
+```
+</details>
 
 ## Admin Portal
 ## Frontend
