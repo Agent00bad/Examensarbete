@@ -50,7 +50,7 @@ The 3 parts my thesis project will be divided into are for showcasing my archite
 ## Admin Portal
 ## Frontend
 ## Tools Used
->This section explains the different tools used such as frameworks, languages, programs and so on.
+>This section explains the different tools used such as frameworks, languages, programs and so on. By expanding the details tabs you can read how the technology was used in the project.
 
 
 - **[Draw.io][Draw.io]** 
