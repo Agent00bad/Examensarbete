@@ -1,9 +1,12 @@
 ﻿namespace Backend.API.Enums;
-
+/// <summary>
+/// How good you are at the language
+/// </summary>
 public enum LanguageLevel
 {
-    Beginner = 1,
-    Intermediate = 2,
-    Professional = 3,
-    Fluent = 4
+    Beginner,
+    Intermediate,
+    Professional,
+    Fluent,
+    Native
 }
