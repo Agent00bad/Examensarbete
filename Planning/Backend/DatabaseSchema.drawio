@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-06T18:06:25.984Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="3e11Tqw5uL8fC8Sb1wXB" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-06T18:18:42.069Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="WUo6TYWbMGkw0VjKy6uQ" version="24.3.1" type="github">
   <diagram name="Page-1" id="9mkFSTUzznH25_XKm-JT">
     <mxGraphModel dx="875" dy="465" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -106,7 +106,7 @@
         <mxCell id="yljysEGKnH6cfGcd8ltv-50" value="RelatedCompanyId : int / null" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="yljysEGKnH6cfGcd8ltv-44" vertex="1">
           <mxGeometry y="180" width="170" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yljysEGKnH6cfGcd8ltv-51" value="Graduated : bool / null" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="yljysEGKnH6cfGcd8ltv-44" vertex="1">
+        <mxCell id="yljysEGKnH6cfGcd8ltv-51" value="Enrolled: bool / null" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="yljysEGKnH6cfGcd8ltv-44" vertex="1">
           <mxGeometry y="210" width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yljysEGKnH6cfGcd8ltv-52" value="LogoUri : string / null" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="yljysEGKnH6cfGcd8ltv-44" vertex="1">
