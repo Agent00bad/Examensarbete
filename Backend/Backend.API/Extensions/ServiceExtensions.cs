@@ -21,7 +21,7 @@ public static class ServiceExtensions
     /// <param name="config">Is passed from <c>CustomConfiguration</c> extension method</param>
     private static void DatabaseConfigurations(IServiceCollection service, IConfiguration config)
     {
-        service.AddDbContext<CvDbContext>(options =>
+         service.AddDbContext<CvDbContext>(options =>
         {
             options.UseSqlServer(config["Database:Cv:ConnectionString"]);
         });

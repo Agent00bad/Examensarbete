@@ -127,7 +127,7 @@ public class PersonalProjectEntity : BaseEntity
 
 </br>
 
-Some of the entities i also made some `enums` for lite the ``PersonalProjectStatus`` you can see in the above implementation of ``PersonalProjectEntity``.
+Some of the entities i also made `enums` for like the ``PersonalProjectStatus`` you can see in the above implementation of ``PersonalProjectEntity``.
 
 <details>
 <summary>Example of one enum</summary>
@@ -142,6 +142,101 @@ public enum PersonalProjectStatus
 }
 ```
 </details>
+
+After all entities was done i handled the connections between them in my DbContext named ``CvDbContext``.
+<details>
+<summary>
+Code for CVDbContext 
+</summary>
+
+>The code at this stage. The connection string is configured in Appsettings and Program.cs
+
+```cs
+
+public class CvDbContext : DbContext
+{
+    public DbSet<AboutEntity> Abouts { get; set; }
+    public DbSet<AdminEntity> Admins  { get; set; }
+    public DbSet<CategoryEntity> Categories  { get; set; }
+    public DbSet<CertificationEntity> Certifications  { get; set; }
+    public DbSet<ConnectedCompanyEntity> ConnectedCompanies  { get; set; }
+    public DbSet<EducationEntity> Educations  { get; set; }
+    public DbSet<LanguageEntity> Languages  { get; set; }
+    public DbSet<InterestEntity> Interests  { get; set; }
+    public DbSet<PersonalProjectEntity> PersonalProjects  { get; set; }
+    public DbSet<PersonalProjectUriEntity> PersonalProjectsUris  { get; set; }
+    public DbSet<SkillEntity> Skills  { get; set; }
+    public DbSet<WorkExperienceEntity> WorkExperiences  { get; set; }
+
+    public CvDbContext(DbContextOptions<CvDbContext> options)
+        : base(options)
+    {
+    }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        Connections(modelBuilder);
+    }
+
+    /// <summary>
+    /// Manages connections between entities
+    /// <example>A many to many relation can be configured here since that is a "connection" for example</example>
+    /// </summary>
+    /// <param name="modelBuilder">The model builder is passed in when called from <c>OnModelCreating</c> override method</param>
+    private void Connections (ModelBuilder modelBuilder)
+    {
+        //Skill related connections
+        modelBuilder.Entity<SkillEntity>()
+            .HasMany(s => s.PersonalProjects)
+            .WithMany(p => p.AsociatedSkills)
+            .UsingEntity("ProjectSkill");
+        
+        modelBuilder.Entity<SkillEntity>()
+            .HasMany(s => s.WorkPlaces)
+            .WithMany(w => w.AsociatedSkills)
+            .UsingEntity("WorkSkill");
+        
+        modelBuilder.Entity<SkillEntity>()
+            .HasMany(s => s.Categories)
+            .WithMany(c => c.AsociatedSkills)
+            .UsingEntity("SkillCategory");
+        
+        modelBuilder.Entity<SkillEntity>()
+            .HasMany(s => s.Educations)
+            .WithMany(e => e.AsociatedSkills)
+            .UsingEntity("EducationalSkill");
+        
+        
+        
+        //Work connections
+        //TODO: Not sure if this connections will work, test before production
+        modelBuilder.Entity<ConnectedCompanyEntity>()
+            .HasOne(c => c.Work)
+            .WithMany()
+            .IsRequired();
+        
+        //Certification connections
+        modelBuilder.Entity<CertificationEntity>()
+            .HasMany(c => c.WorkExperiences)
+            .WithMany(w => w.Certifications)
+            .UsingEntity("WorkCertification");
+        
+        modelBuilder.Entity<SkillEntity>()
+            .HasMany(s => s.Certifications)
+            .WithMany(c => c.AsociatedSkills)
+            .UsingEntity("SkillCertification");
+
+        modelBuilder.Entity<CertificationEntity>()
+            .HasMany(c => c.Educations)
+            .WithMany(e => e.Certifications)
+            .UsingEntity("EducationCertification");
+    }
+}
+```
+
+</details>
+
+Since there was probably gonna be some problems later on i didn't want work towards my Azure database yet so i setup a docker container based on microsofts [docker image](#tools-used) for [Sql Server 2022](#tools-used) which has the same functionallity as [Azure Sql database and server](#tools-used). I also setup an ``ensurecreate`` logic instead of using the migrate and update at this point since many changes was possible to be happening, but this was gonna be replaced with migrate and update after the groundwork of the api was more solid.
 
 ## Admin Portal
 ## Frontend
@@ -158,6 +253,8 @@ public enum PersonalProjectStatus
   ![Picture of trello board divided into 4 sections in the following order from left to right: "Backlog","In Progress", "Testing" and "Done"](./README_Pictures/TrelloLayout.png)</details>
 - **[SQL Server][SQLServer]**<details>SQL Server is a SQL server provided by microsoft.</details>
 - **[Azure]**<details>Azure is a cloud provider whom i have my [SQL server][SQLServer] at and some other services in this project</details>
+- **[Docker]**<details>Docker works like a lightweigh and portable virtual machine but for application instances.</details>
+- **[SQL server image][SQLImage]**<details>The sql server let's you create a container of the SQL server. I used this for testing my database so that no breaknig changes would affect my Azure database since it's easy to kill and create a new container from scrtatch if needed.</details>
 
   [comment]: # (This section is for storing links for easy reuse)
 
@@ -172,3 +269,7 @@ public enum PersonalProjectStatus
   [Azure]: https://azure.microsoft.com/sv-se/
 
   [SQLServer]: https://learn.microsoft.com/en-us/sql/sql-server/what-is-sql-server?view=sql-server-ver16
+
+  [Docker]: https://www.docker.com/
+
+  [SqlImage]: https://hub.docker.com/_/microsoft-mssql-server/
