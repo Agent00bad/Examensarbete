@@ -34,7 +34,7 @@ public class SkillEntity : BaseEntity
     /// <summary>
     /// Associated work places
     /// </summary>
-    public ICollection<WorkEntity>? WorkPlaces { get; set; }
+    public ICollection<WorkExperienceEntity>? WorkPlaces { get; set; }
     /// <summary>
     /// Associated Categories
     /// </summary>

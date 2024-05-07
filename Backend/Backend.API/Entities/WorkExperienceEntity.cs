@@ -3,7 +3,7 @@ using Backend.API.AbstractClasses;
 
 namespace Backend.API.Entities;
 
-public class WorkEntity : BaseEntity
+public class WorkExperienceEntity : BaseEntity
 {
     //TODO: Check if DateOnly works or change to DateTime
     /// <summary>
@@ -31,4 +31,6 @@ public class WorkEntity : BaseEntity
     /// </summary>
     public string? LogoUri { get; set; }
     public ICollection<SkillEntity>? AsociatedSkills { get; set; }
+    
+    public ICollection<ConnectedCompanyEntity>? ConnectedCompany { get; set; } 
 }

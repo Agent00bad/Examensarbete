@@ -2,7 +2,7 @@
 
 namespace Backend.API.Entities;
 
-public class PersonalInterestEntity : BaseEntity
+public class InterestEntity : BaseEntity
 {
     public string? Description { get; set; }
 }

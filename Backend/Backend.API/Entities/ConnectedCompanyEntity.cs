@@ -28,4 +28,8 @@ public class ConnectedCompanyEntity : BaseEntity
     /// Company logo uri. Can be remote or locally stored
     /// </summary>
     public string? LogoUri { get; set; }
+    /// <summary>
+    /// Connection between this company and the workplace/work experience
+    /// </summary>
+    public required WorkExperienceEntity Work { get; set; }
 }
