@@ -17,10 +17,13 @@ public class CvDbContext : DbContext
     public DbSet<PersonalProjectUriEntity> PersonalProjectsUris  { get; set; }
     public DbSet<SkillEntity> Skills  { get; set; }
     public DbSet<WorkExperienceEntity> WorkExperiences  { get; set; }
-    
+
+    public CvDbContext(DbContextOptions<CvDbContext> options)
+        : base(options)
+    {
+    }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer();
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
