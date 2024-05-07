@@ -32,5 +32,7 @@ public class WorkExperienceEntity : BaseEntity
     public string? LogoUri { get; set; }
     public ICollection<SkillEntity>? AsociatedSkills { get; set; }
     
-    public ICollection<ConnectedCompanyEntity>? ConnectedCompany { get; set; } 
+    public ICollection<ConnectedCompanyEntity>? ConnectedCompanies { get; set; } 
+    
+    public ICollection<CertificationEntity>? Certifications { get; set; }
 }

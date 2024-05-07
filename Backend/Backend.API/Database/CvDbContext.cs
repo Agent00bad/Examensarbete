@@ -56,16 +56,29 @@ public class CvDbContext : DbContext
             .WithMany(e => e.AsociatedSkills)
             .UsingEntity("EducationalSkill");
         
-        modelBuilder.Entity<SkillEntity>()
-            .HasMany(s => s.Certifications)
-            .WithMany(c => c.AsociatedSkills)
-            .UsingEntity("SkillCertification");
         
+        
+        //Work connections
         //TODO: Not sure if this connections will work, test before production
-        //Work connections 
         modelBuilder.Entity<ConnectedCompanyEntity>()
             .HasOne(c => c.Work)
             .WithMany()
             .IsRequired();
+        
+        //Certification connections
+        modelBuilder.Entity<CertificationEntity>()
+            .HasMany(c => c.WorkExperiences)
+            .WithMany(w => w.Certifications)
+            .UsingEntity("WorkCertification");
+        
+        modelBuilder.Entity<SkillEntity>()
+            .HasMany(s => s.Certifications)
+            .WithMany(c => c.AsociatedSkills)
+            .UsingEntity("SkillCertification");
+
+        modelBuilder.Entity<CertificationEntity>()
+            .HasMany(c => c.Educations)
+            .WithMany(e => e.Certifications)
+            .UsingEntity("EducationCertification");
     }
 }

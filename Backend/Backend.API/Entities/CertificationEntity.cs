@@ -25,5 +25,8 @@ public class CertificationEntity : BaseEntity
     /// Skills associated with the certification
     /// </summary>
     public ICollection<SkillEntity>? AsociatedSkills { get; set; }
+    public ICollection<WorkExperienceEntity>? WorkExperiences { get; set; }
+    public ICollection<EducationEntity>? Educations { get; set; }
+    
 
 }
