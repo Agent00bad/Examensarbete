@@ -1,5 +1,6 @@
 ﻿using Backend.API.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Backend.API.Database;
 
@@ -26,6 +27,7 @@ public class CvContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         Relations(modelBuilder);
+        SeedData(modelBuilder);
     }
 
     /// <summary>
@@ -62,6 +64,7 @@ public class CvContext : DbContext
         modelBuilder.Entity<WorkExperienceEntity>()
             .HasMany(w => w.ConnectedCompanies)
             .WithOne(c => c.Work);
+
         //Certification connections
         modelBuilder.Entity<CertificationEntity>()
             .HasMany(c => c.WorkExperiences)
@@ -77,7 +80,7 @@ public class CvContext : DbContext
             .HasMany(c => c.Educations)
             .WithMany(e => e.Certifications)
             .UsingEntity("EducationCertification");
-        
+
         //category related relations
         modelBuilder.Entity<CategoryEntity>()
             .HasMany(c => c.AsociatedSkills)
@@ -99,7 +102,7 @@ public class CvContext : DbContext
             .HasMany(c => c.Certifications)
             .WithMany(c => c.Categories)
             .UsingEntity("CertificationCategory");
-        
+
         //personal projects relations
         modelBuilder.Entity<PersonalProjectUriEntity>()
             .HasOne(p => p.PersonalProject)
@@ -115,19 +118,20 @@ public class CvContext : DbContext
     /// <summary>
     /// Manages seed data
     /// </summary>
-    /// <param name="builder">passed when calling this method from overload method <c>OnModelCreating</c></param>
+    /// <param name="builder">Is the <c>ModelBuilder</c> in the overloaded method <c>OnModelCreating</c> seen in overload method passed in</param>
     private void SeedData(ModelBuilder builder)
     {
         builder.Entity<AboutEntity>().HasData(
             new AboutEntity
             {
                 Id = 1,
-                Description = "Hello world! I am a test person and my passions are to test things and just be a test for this database!",
+                Description =
+                    "Hello world! I am a test person and my passions are to test things and just be a test for this database!",
                 FirstName = "Sven",
                 LastName = "Svenson",
-                BirthDate = new DateOnly(1999,01,01),
-                ImageUri = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg2-3.timeinc.net%2Fpeople%2Fi%2F2016%2Fnews%2F160620%2Fsweden-day-1024.jpg&f=1&nofb=1&ipt=9f5ea9a7784e3a7327feb4bc406fb3eaf685db0b7dcb55bab20741d488968353&ipo=images",
-                
+                BirthDate = new DateOnly(1999, 01, 01),
+                ImageUri =
+                    "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg2-3.timeinc.net%2Fpeople%2Fi%2F2016%2Fnews%2F160620%2Fsweden-day-1024.jpg&f=1&nofb=1&ipt=9f5ea9a7784e3a7327feb4bc406fb3eaf685db0b7dcb55bab20741d488968353&ipo=images",
             }
         );
         builder.Entity<AdminEntity>().HasData(new AdminEntity
@@ -136,6 +140,21 @@ public class CvContext : DbContext
             Email = "test@notreal.com",
             Password = "Notarealorhashedpassword"
         });
+        builder.Entity<CategoryEntity>()
+            .HasData(new
+            {
+                Id = 1,
+                Name = "Test",
+            });
+        builder.Entity<EducationEntity>()
+            .HasData(new
+            {
+                Id = 1,
+                Name = "Test school",
+                StartDate = new DateOnly(2020, 3, 23),
+                EndDate = new DateOnly(2024, 5, 21),
+            });
         
+        builder.
     }
 }

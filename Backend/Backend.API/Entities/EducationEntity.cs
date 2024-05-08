@@ -10,7 +10,7 @@ public class EducationEntity : BaseEntity
     /// <summary>
     /// When you started your education
     /// </summary>
-    public DateOnly StartDate { get; set; }
+    public required DateOnly StartDate { get; set; }
     /// <summary>
     /// Estimated graduation date or the date you graduated/stopped the education
     /// </summary>
