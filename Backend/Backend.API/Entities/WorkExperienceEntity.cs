@@ -9,7 +9,7 @@ public class WorkExperienceEntity : BaseEntity
     /// <summary>
     /// The date you started working at the company/started the company
     /// </summary>
-    public DateOnly StartDate { get; set; }
+    public required DateOnly StartDate { get; set; }
     /// <summary>
     /// The date you stoped working at the company
     /// </summary>
@@ -17,11 +17,11 @@ public class WorkExperienceEntity : BaseEntity
     /// <summary>
     /// Is this company/work relevant to the positions you are looking for? Then set this to true
     /// </summary>
-    public bool Relavent { get; set; }
+    public required bool Relavent { get; set; }
     /// <summary>
     /// Describe your work at the company
     /// </summary>
-    public string Description { get; set; }
+    public required string Description { get; set; }
     /// <summary>
     /// Your official role at the company
     /// </summary>

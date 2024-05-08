@@ -1,11 +1,15 @@
 ﻿using Backend.API.Entities;
+using Backend.API.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace Backend.API.Database;
 
 public class CvContext : DbContext
 {
+    private IConfiguration _config;
+
     public DbSet<AboutEntity> Abouts { get; set; }
     public DbSet<AdminEntity> Admins { get; set; }
     public DbSet<CategoryEntity> Categories { get; set; }
@@ -19,15 +23,20 @@ public class CvContext : DbContext
     public DbSet<SkillEntity> Skills { get; set; }
     public DbSet<WorkExperienceEntity> WorkExperiences { get; set; }
 
-    public CvContext(DbContextOptions<CvContext> options)
+    public CvContext(DbContextOptions<CvContext> options, IConfiguration config)
         : base(options)
     {
+        _config = config;
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         Relations(modelBuilder);
-        SeedData(modelBuilder);
+        if (_config.GetValue<bool>("Database:Cv:UseSeedData"))
+        {
+            SeedData(modelBuilder);
+            JunktonTableSeedData(modelBuilder);
+        }
     }
 
     /// <summary>
@@ -121,6 +130,11 @@ public class CvContext : DbContext
     /// <param name="builder">Is the <c>ModelBuilder</c> in the overloaded method <c>OnModelCreating</c> seen in overload method passed in</param>
     private void SeedData(ModelBuilder builder)
     {
+        //Auto generating the amount set at these
+        int workExperienceAmount = 6;
+        int skillsToAdd = 6;
+        
+        
         builder.Entity<AboutEntity>().HasData(
             new AboutEntity
             {
@@ -147,14 +161,112 @@ public class CvContext : DbContext
                 Name = "Test",
             });
         builder.Entity<EducationEntity>()
-            .HasData(new
+            .HasData(new EducationEntity
             {
                 Id = 1,
                 Name = "Test school",
-                StartDate = new DateOnly(2020, 3, 23),
-                EndDate = new DateOnly(2024, 5, 21),
+                StartDate = new DateOnly(2020,
+                    3,
+                    23),
+                EndDate = new DateOnly(2024,
+                    5,
+                    21),
+                Description = "Nice school",
             });
+        builder.Entity<CertificationEntity>().HasData(new CertificationEntity
+        {
+            Id = 1,
+            Name = "The amazing test certification",
+            Description =
+                "This test certification is truly amazing, it gives you such amazing privileges like nothing and nothing more. It is truly humbling to be in the presence of someone with a test cert."
+        });
+
+        var workEntityList = new List<WorkExperienceEntity>();
+        for (int i = 1; i <= workExperienceAmount; i++)
+        {
+            workEntityList.Add(new WorkExperienceEntity
+            {
+                Id = i,
+                Name = $"work place {i}",
+                StartDate = new DateOnly(2020 - i, 2 + i, 1 + i),
+                EndDate = i % 3 != 0 ? new DateOnly(2020 + i,  12 - i, 10 - i) : null,
+                Relavent = i % 2 == 0,
+                Description = $"Great work {i}",
+                Role = i % 2 == 0 ? "Fun role" : "Not as nice role"
+            });
+        }
+
+        builder.Entity<WorkExperienceEntity>().HasData(workEntityList);
+
+        var connectedCompaniesList = new List<Object>();
+        for (int i = 1; i < workExperienceAmount/2; i++)
+        {
+            connectedCompaniesList.Add(new
+            {
+                Id = i,
+                Description = $"I worked here ",
+                WorkId = i == 1 ? i : i % 3 != 0 ? i - (i - 1) : i - (i - 3),
+                Name = "ConnectedCompany",
+                StartDate = workEntityList[i].StartDate,
+                EndDate = workEntityList[i].EndDate,
+                Role = workEntityList[i].Role,
+            });
+        }
+
+        builder.Entity<ConnectedCompanyEntity>().HasData(connectedCompaniesList);
+
+        var interests = new List<InterestEntity>()
+        {
+            new InterestEntity { Id = 1, Name = "Beatboxing", Description = null },
+            new InterestEntity { Id = 2, Name = "Mewing", Description = "Putting my tongue at the roof of my mouth to make my jaw more pronounced... I promise it works!! don't scroll away!!!" },
+            new InterestEntity { Id = 3, Name = "Turning right", Description = "I don't hate turning left, I just love turning right <3" },
+            new InterestEntity { Id = 4, Name = "Listening to the wind", Description = null },
+        };
+        builder.Entity<InterestEntity>().HasData(interests);
         
-        builder.
+        builder.Entity<LanguageEntity>().HasData(
+        [
+           new LanguageEntity { Id = 1, Name = "Swedish", Level = LanguageLevel.Native },
+           new LanguageEntity { Id=2, Name = "English", Level = LanguageLevel.Professional},
+           new LanguageEntity { Id=3, Name = "French", Level = LanguageLevel.Beginner},
+        ]);
+
+        builder.Entity<PersonalProjectEntity>().HasData(new PersonalProjectEntity
+        {
+            Id = 1,
+            Description = "I once set up a small farm, it was very fun",
+            Name = "A small farm",
+            Status = PersonalProjectStatus.Finished
+        });
+        
+        builder.Entity<PersonalProjectUriEntity>().HasData(new
+        {
+            Id = 1,
+            Uri = "https://youtu.be/dQw4w9WgXcQ?si=VmNxHNhgec4fBrg_",
+            ProjectId = 1
+        });
+
+        var skillList = new List<SkillEntity>();
+        for (int i = 1; i < skillsToAdd; i++)
+        {
+            skillList.Add(new SkillEntity
+            {
+                Id = i,
+                SkillRelevance = (SkillRelevance)(i%(int)SkillRelevance.TopSkill),
+                Description = i%2 == 0 ? $"description for {i}" : null,
+                Name = $"Skill {i}",
+                SkillLevel = (SkillLevel)(i%(int)SkillLevel.Expert)
+            });
+        }
+        builder.Entity<SkillEntity>().HasData(skillList);
+    }
+
+    /// <summary>
+    /// For seeding junction tables. Junktion tables are tables that connect many-to-many relations
+    /// </summary>
+    /// <param name="builder"></param>
+    private void JunktonTableSeedData(ModelBuilder builder)
+    {
+        
     }
 }

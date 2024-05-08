@@ -4,7 +4,7 @@ namespace Backend.API.Entities;
 
 public class EducationEntity : BaseEntity
 {
-    public string Description { get; set; }
+    public string? Description { get; set; }
     
     //TODO:Make sure DateOnly works or change to DateTime
     /// <summary>

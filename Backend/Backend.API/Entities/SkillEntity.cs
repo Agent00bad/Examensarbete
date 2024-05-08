@@ -19,14 +19,13 @@ public class SkillEntity : BaseEntity
     /// <summary>
     /// How relevent the skill are and therefore how prioritized it being shown should be
     /// </summary>
-    public SkillRelevance SkillRelevance { get; set; }
+    public required SkillRelevance SkillRelevance { get; set; }
     /// <summary>
     /// Logo to use for skill, either remote uri or local
     /// <example>If you know python, you might want to use pythons logo for the skill</example>
     /// </summary>
     public string? LodoUri { get; set; }
 
-    #region Foreign entities
     /// <summary>
     /// Associated Personal projects
     /// </summary>
@@ -47,5 +46,4 @@ public class SkillEntity : BaseEntity
     /// Associated Certifications
     /// </summary>
     public ICollection<CertificationEntity>? Certifications { get; set; }
-    #endregion
 }
