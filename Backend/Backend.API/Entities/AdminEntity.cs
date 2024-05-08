@@ -5,7 +5,7 @@ namespace Backend.API.Entities;
 //TODO:Depending on how auth0 integration is made this might not be needed 
 public class AdminEntity : IEntity 
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     /// <summary>
     /// The admins login email
     /// </summary>

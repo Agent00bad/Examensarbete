@@ -21,8 +21,11 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    
-    app.NoMigration(false);
+
+    if (app.Configuration["Database:Cv:UsingMigration"].ToLower() == "false")
+    {
+        app.NoMigration(false);
+    }
 }
 
 app.UseHttpsRedirection();

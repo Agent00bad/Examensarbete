@@ -5,7 +5,7 @@ namespace Backend.API.Entities;
 
 public class PersonalProjectUriEntity : IEntity
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public required string Uri { get; set; }
     public required PersonalProjectEntity PersonalProjectEntityId {get; set; }
 }

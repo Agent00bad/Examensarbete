@@ -5,7 +5,7 @@ namespace Backend.API.Entities;
 
 public class AboutEntity : IEntity
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     /// <summary>
     /// The personsn first name
     /// </summary>

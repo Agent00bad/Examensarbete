@@ -8,7 +8,7 @@ namespace Backend.API.AbstractClasses;
 public class BaseEntity : IEntity
 {
     /// <value><c>Id</c> sets the Id in entity framework></value>
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     /// <value><c>Name</c> of the entity</value>
     /// <example>A name for a person could be "Jane" and for a company "Hello World Co" </example>
     public string Name { get; set; }
