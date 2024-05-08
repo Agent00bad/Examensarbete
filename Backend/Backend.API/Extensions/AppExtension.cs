@@ -12,7 +12,7 @@ public static class AppExtension
     public static void NoMigration(this WebApplication? app, bool recreateDatabase = false)
     {
         var scope = app.Services.CreateScope();
-        var context = scope.ServiceProvider.GetRequiredService<CvDbContext>();
+        var context = scope.ServiceProvider.GetRequiredService<CvContext>();
 
         if (recreateDatabase) context.Database.EnsureDeleted();
         context.Database.EnsureCreated();

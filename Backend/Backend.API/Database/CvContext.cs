@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Backend.API.Database;
 
-public class CvDbContext : DbContext
+public class CvContext : DbContext
 {
     public DbSet<AboutEntity> Abouts { get; set; }
     public DbSet<AdminEntity> Admins { get; set; }
@@ -18,7 +18,7 @@ public class CvDbContext : DbContext
     public DbSet<SkillEntity> Skills { get; set; }
     public DbSet<WorkExperienceEntity> WorkExperiences { get; set; }
 
-    public CvDbContext(DbContextOptions<CvDbContext> options)
+    public CvContext(DbContextOptions<CvContext> options)
         : base(options)
     {
     }
