@@ -35,4 +35,5 @@ public class WorkExperienceEntity : BaseEntity
     public ICollection<ConnectedCompanyEntity>? ConnectedCompanies { get; set; } 
     
     public ICollection<CertificationEntity>? Certifications { get; set; }
+    public ICollection<CategoryEntity>? Categories { get; set; }
 }

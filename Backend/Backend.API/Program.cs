@@ -22,9 +22,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 
-    if (app.Configuration["Database:Cv:UsingMigration"].ToLower() == "false")
+    if (!app.Configuration.GetValue<bool>("Database:Cv:UsingMigration"))
     {
-        app.NoMigration(false);
+        app.NoMigration(app.Configuration.GetValue<bool>("DataBase:Cv:RecreateDatabase"));
     }
 }
 

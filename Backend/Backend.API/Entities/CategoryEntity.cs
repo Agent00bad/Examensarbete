@@ -8,7 +8,10 @@ namespace Backend.API.Entities;
 /// </summary>
 public class CategoryEntity : BaseEntity
 {
-    //TODO: if implemented, flesh it out or remove categories depending on how far i get
     public string? Description { get; set; }
     public ICollection<SkillEntity>? AsociatedSkills { get; set; }
+    public ICollection<EducationEntity>? Educations { get; set; }
+    public ICollection<WorkExperienceEntity>? WorkExperiences { get; set; }
+    public ICollection<PersonalProjectEntity>? PersonalProjects { get; set; }
+    public ICollection<CertificationEntity>? Certifications { get; set; }
 }

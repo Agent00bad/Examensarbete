@@ -28,4 +28,5 @@ public class PersonalProjectEntity : BaseEntity
     /// Skills associated with the project
     /// </summary>
     public ICollection<SkillEntity>? AsociatedSkills { get; set; }
+    public ICollection<CategoryEntity>? Categories { get; set; }
 }
