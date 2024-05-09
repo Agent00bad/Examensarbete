@@ -35,7 +35,7 @@ public class CvContext : DbContext
         if (_config.GetValue<bool>("Database:Cv:UseSeedData"))
         {
             SeedData(modelBuilder);
-            JunktonTableSeedData(modelBuilder);
+            JunktionTableSeedData(modelBuilder);
         }
     }
 
@@ -133,8 +133,8 @@ public class CvContext : DbContext
         //Auto generating the amount set at these
         int workExperienceAmount = 6;
         int skillsToAdd = 6;
-        
-        
+
+
         builder.Entity<AboutEntity>().HasData(
             new AboutEntity
             {
@@ -189,7 +189,7 @@ public class CvContext : DbContext
                 Id = i,
                 Name = $"work place {i}",
                 StartDate = new DateOnly(2020 - i, 2 + i, 1 + i),
-                EndDate = i % 3 != 0 ? new DateOnly(2020 + i,  12 - i, 10 - i) : null,
+                EndDate = i % 3 != 0 ? new DateOnly(2020 + i, 12 - i, 10 - i) : null,
                 Relavent = i % 2 == 0,
                 Description = $"Great work {i}",
                 Role = i % 2 == 0 ? "Fun role" : "Not as nice role"
@@ -199,7 +199,7 @@ public class CvContext : DbContext
         builder.Entity<WorkExperienceEntity>().HasData(workEntityList);
 
         var connectedCompaniesList = new List<Object>();
-        for (int i = 1; i < workExperienceAmount/2; i++)
+        for (int i = 1; i < workExperienceAmount / 2; i++)
         {
             connectedCompaniesList.Add(new
             {
@@ -218,17 +218,25 @@ public class CvContext : DbContext
         var interests = new List<InterestEntity>()
         {
             new InterestEntity { Id = 1, Name = "Beatboxing", Description = null },
-            new InterestEntity { Id = 2, Name = "Mewing", Description = "Putting my tongue at the roof of my mouth to make my jaw more pronounced... I promise it works!! don't scroll away!!!" },
-            new InterestEntity { Id = 3, Name = "Turning right", Description = "I don't hate turning left, I just love turning right <3" },
+            new InterestEntity
+            {
+                Id = 2, Name = "Mewing",
+                Description =
+                    "Putting my tongue at the roof of my mouth to make my jaw more pronounced... I promise it works!! don't scroll away!!!"
+            },
+            new InterestEntity
+            {
+                Id = 3, Name = "Turning right", Description = "I don't hate turning left, I just love turning right <3"
+            },
             new InterestEntity { Id = 4, Name = "Listening to the wind", Description = null },
         };
         builder.Entity<InterestEntity>().HasData(interests);
-        
+
         builder.Entity<LanguageEntity>().HasData(
         [
-           new LanguageEntity { Id = 1, Name = "Swedish", Level = LanguageLevel.Native },
-           new LanguageEntity { Id=2, Name = "English", Level = LanguageLevel.Professional},
-           new LanguageEntity { Id=3, Name = "French", Level = LanguageLevel.Beginner},
+            new LanguageEntity { Id = 1, Name = "Swedish", Level = LanguageLevel.Native },
+            new LanguageEntity { Id = 2, Name = "English", Level = LanguageLevel.Professional },
+            new LanguageEntity { Id = 3, Name = "French", Level = LanguageLevel.Beginner },
         ]);
 
         builder.Entity<PersonalProjectEntity>().HasData(new PersonalProjectEntity
@@ -238,7 +246,7 @@ public class CvContext : DbContext
             Name = "A small farm",
             Status = PersonalProjectStatus.Finished
         });
-        
+
         builder.Entity<PersonalProjectUriEntity>().HasData(new
         {
             Id = 1,
@@ -252,12 +260,13 @@ public class CvContext : DbContext
             skillList.Add(new SkillEntity
             {
                 Id = i,
-                SkillRelevance = (SkillRelevance)(i%(int)SkillRelevance.TopSkill),
-                Description = i%2 == 0 ? $"description for {i}" : null,
+                SkillRelevance = (SkillRelevance)(i % (int)SkillRelevance.TopSkill),
+                Description = i % 2 == 0 ? $"description for {i}" : null,
                 Name = $"Skill {i}",
-                SkillLevel = (SkillLevel)(i%(int)SkillLevel.Expert)
+                SkillLevel = (SkillLevel)(i % (int)SkillLevel.Expert)
             });
         }
+
         builder.Entity<SkillEntity>().HasData(skillList);
     }
 
@@ -265,8 +274,29 @@ public class CvContext : DbContext
     /// For seeding junction tables. Junktion tables are tables that connect many-to-many relations
     /// </summary>
     /// <param name="builder"></param>
-    private void JunktonTableSeedData(ModelBuilder builder)
+    private void JunktionTableSeedData(ModelBuilder builder)
     {
-        
+        //Categories
+        builder.Entity("CertificationCategory").HasData(new { CategoriesId = 1, CertificationsId = 1 });
+        builder.Entity("EducationalCategory").HasData(new { CategoriesId = 1, EducationsId = 1 });
+        builder.Entity("ProjectCategory").HasData(new { CategoriesId = 1, PersonalProjectsId = 1 });
+        builder.Entity("SkillCategory").HasData(new { CategoriesId = 1, AsociatedSkillsId = 1 });
+        builder.Entity("WorkCategory").HasData([
+            new { CategoriesId = 1, WorkExperiencesId = 1 }, new { CategoriesId = 1, WorkExperiencesId = 2 }
+        ]);
+
+        //Certifications
+        builder.Entity("EducationCertification").HasData(new { CertificationsId = 1, EducationsId = 1 });
+        builder.Entity("SkillCertification").HasData([
+            new { CertificationsId = 1, AsociatedSkillsId = 1 }, new { CertificationsId = 1, AsociatedSkillsId = 2 }
+        ]);
+        builder.Entity("WorkCertification").HasData([
+            new { CertificationsId = 1, WorkExperiencesId = 1 }, new { CertificationsId = 1, WorkExperiencesId = 2 }
+        ]);
+
+        //Skills
+        builder.Entity("EducationalSkill").HasData([new { AsociatedSkillsId = 1, EducationsId = 1 }]);
+        builder.Entity("ProjectSkill").HasData([new { AsociatedSkillsId = 1, PersonalProjectsId = 1 }]);
+        builder.Entity("WorkSkill").HasData([new { AsociatedSkillsId = 1, WorkPlacesId = 1 }]);
     }
 }
