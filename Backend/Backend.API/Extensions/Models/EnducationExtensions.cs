@@ -16,7 +16,7 @@ public static class EnducationExtensions
         Enrolled = entity.Enrolled,
         LogoUri = entity.LogoUri, 
     };
-    
+
     /// <returns>Entity converted to DTO with relations</returns>
     public static EducationIncludedDTO ToIncludedDto(this EducationEntity entity) => new EducationIncludedDTO()
     {
@@ -26,9 +26,9 @@ public static class EnducationExtensions
         StartDate = entity.StartDate,
         EndDate = entity.EndDate,
         Enrolled = entity.Enrolled,
-        LogoUri = entity.LogoUri, 
-        AsociatedSkills = entity.AsociatedSkills?.Select(s => s.ToDto()).ToList(), 
-        Categories = entity.Categories?.Select(c => c.ToDto()).ToList(), 
+        LogoUri = entity.LogoUri,
+        AsociatedSkills = entity.AsociatedSkills?.Select(s => s.ToDto()).ToList(),
+        Categories = entity.Categories?.Select(c => c.ToDto()).ToList(),
         Certifications = entity.Certifications?.Select(c => c.ToDto()).ToList(),
-    }
+    };
 }
