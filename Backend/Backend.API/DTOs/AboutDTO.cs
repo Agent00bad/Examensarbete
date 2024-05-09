@@ -3,7 +3,7 @@ using Backend.API.Entities.Interface;
 
 namespace Backend.API.Entities;
 
-public class AboutDTO<T> : IDto 
+public class AboutDTO : IDto 
 {
     public int Id { get; set; }
     /// <summary>
