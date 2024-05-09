@@ -6,6 +6,6 @@ namespace Backend.API.Entities;
 public class PersonalProjectUriDTO : IDto
 {
     public int Id { get; set; }
-    public required string Uri { get; set; }
-    public required PersonalProjectDTO PersonalProject {get; set; }
+    public string Uri { get; set; }
+    public PersonalProjectDTO PersonalProject {get; set; }
 }

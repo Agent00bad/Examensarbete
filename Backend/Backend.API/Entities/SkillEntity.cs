@@ -24,7 +24,7 @@ public class SkillEntity : BaseEntity
     /// Logo to use for skill, either remote uri or local
     /// <example>If you know python, you might want to use pythons logo for the skill</example>
     /// </summary>
-    public string? LodoUri { get; set; }
+    public string? LogoUri { get; set; }
 
     /// <summary>
     /// Associated Personal projects

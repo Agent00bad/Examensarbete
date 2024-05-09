@@ -21,11 +21,4 @@ public class CertificationDTO : BaseDto
     /// Exrternal Certification site, some sites provide certification links
     /// </summary>
     public string? CertificationUrl { get; set; }
-    /// <summary>
-    /// Skills associated with the certification
-    /// </summary>
-    public ICollection<SkillDTO>? AsociatedSkills { get; set; }
-    public ICollection<WorkExperienceDTO>? WorkExperiences { get; set; }
-    public ICollection<EducationDTO>? Educations { get; set; }
-    public ICollection<CategoryDTO>? Categories { get; set; }
 }

@@ -5,8 +5,6 @@ namespace Backend.API.Entities;
 public class EducationDTO : BaseDto
 {
     public string? Description { get; set; }
-    
-    //TODO:Make sure DateOnly works or change to DateTime
     /// <summary>
     /// When you started your education
     /// </summary>
@@ -23,11 +21,4 @@ public class EducationDTO : BaseDto
     /// local or remote logo for the education
     /// </summary>
     public string? LogoUri { get; set; }
-    /// <summary>
-    /// Skills associated with the education
-    /// </summary>
-    public ICollection<SkillDTO>? AsociatedSkills { get; set; }
-    public ICollection<CertificationDTO>? Certifications { get; set; }
-    public ICollection<CategoryDTO>? Categories  { get; set; }
-
 }

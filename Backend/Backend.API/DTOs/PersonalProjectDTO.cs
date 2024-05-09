@@ -20,13 +20,4 @@ public class PersonalProjectDTO : BaseDto
     /// In what status a project is using the <c>PersonalProjectStatus enum</c>
     /// </summary>
     public PersonalProjectStatus Status { get; set; }
-    /// <summary>
-    /// Collection of project uris like external sites project sites and so on
-    /// </summary>
-    public ICollection<PersonalProjectUriDTO>? ProjectUri { get; set; }
-    /// <summary>
-    /// Skills associated with the project
-    /// </summary>
-    public ICollection<SkillDTO>? AsociatedSkills { get; set; }
-    public ICollection<CategoryDTO>? Categories { get; set; }
 }
