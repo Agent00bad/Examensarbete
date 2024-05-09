@@ -5,7 +5,6 @@ namespace Backend.API.Entities;
 
 public class WorkExperienceDTO : BaseDto
 {
-    //TODO: Check if DateOnly works or change to DateTime
     /// <summary>
     /// The date you started working at the company/started the company
     /// </summary>
@@ -30,10 +29,4 @@ public class WorkExperienceDTO : BaseDto
     /// Company logo uri. Can be remote or locally stored
     /// </summary>
     public string? LogoUri { get; set; }
-    public ICollection<SkillDTO>? AsociatedSkills { get; set; }
-    
-    public ICollection<ConnectedCompanyDTO>? ConnectedCompanies { get; set; } 
-    
-    public ICollection<CertificationDTO>? Certifications { get; set; }
-    public ICollection<CategoryDTO>? Categories { get; set; }
 }

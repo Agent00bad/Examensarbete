@@ -1,10 +1,16 @@
-﻿using Backend.API.Entities;
+﻿using Backend.API.Database;
+using Backend.API.Entities;
 using Backend.API.Entities.Interface;
 
 namespace Backend.API.Repositories;
 
 public class AboutRepository : IRepository<AboutEntity,AboutDTO>
 {
+    private CvContext _context;
+    public AboutRepository(CvContext context)
+    {
+        _context = context;
+    }
     public Task<IEnumerable<AboutDTO>> Get(bool includeded = true)
     {
         throw new NotImplementedException();

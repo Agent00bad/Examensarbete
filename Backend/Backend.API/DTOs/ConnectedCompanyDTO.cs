@@ -8,7 +8,6 @@ namespace Backend.API.Entities;
 /// </summary>
 public class ConnectedCompanyDTO : BaseDto
 {
-    //TODO: Check if DateOnly works or change to DateTime
     /// <summary>
     /// The date you started working at the company/started the company
     /// </summary>
