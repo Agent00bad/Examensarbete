@@ -1,5 +1,9 @@
 using Backend.API.Database;
+using Backend.API.Entities;
+using Backend.API.Entities.Interface;
+using Backend.API.Entities.RelationsIncluded;
 using Backend.API.Extensions;
+using Backend.API.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +17,7 @@ builder.Services.CustomConfigurations(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<IRepository<SkillEntity, SkillIncludedDTO>, SkillRepository>();
 
 var app = builder.Build();
 
