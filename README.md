@@ -21,6 +21,7 @@ The 3 parts my thesis project will be divided into are for showcasing my archite
       - [Api](#api)
   - [Admin Portal](#admin-portal)
   - [Frontend](#frontend)
+  - [Conclusion/Result](#conclusionresult)
   - [Tools Used](#tools-used)
 ## Backend
   ### Planing
@@ -44,202 +45,21 @@ The 3 parts my thesis project will be divided into are for showcasing my archite
   </details>
 
   ### Execution
+
   #### database 
 
-  For the database I used Azures *free general purpose offer SQL server database* which is a database one tier above free, gained through a promotion making it free for 100 000 vCore seconds every month which is ideal for this applications needs since i wont have to worry about costs.
+  For the database I used [Azures](#tools-used) *free general purpose offer [SQL server database](#tools-used)* which is a database one tier above free called basic, gained through a promotion making it free for 100 000 vCore seconds every month and when reached it is paused, which is ideal for this applications needs since i wont have to worry about costs. For testing and configuring the database i used a container of Microsofts offical [docker image](#tools-used) of [SQL Server](#tools-used) which is the same kind of server used on Azure so i could test and create data locally to a docker volume.
 
   #### Api
+For the api I'm using *[ASP.NET Core RestApi](#tools-used)* and [Entity framework][Tools]. I'm using a code first approach so i started by configuring up the database string to my local [SQL Server container][Tools] in the "*appsettings.Development.json*" file together with some other test related parameters i wanted to use and then created the entities and database context named ``CvContext`` in my backend project. The ``CvContext`` was configured so the database would be modeled based on my [database schema](#planing) created in the planning stage but some small changes happaned like the Category table being given relations to most other entities and not just the Skills table so things they can be categorized better. Other then that it was closelly modeled based on the schema. 
 
-  I setup a *[ASP.NET Core C#](#tools-used) RestAPI* to transfer data with, but also to manage the database with the help of [Entity Framework](#tools-used). The first thing i did was add a basic folder structure, add all the entities to the API based on the database schema and connect to the database with EF (abbreviation for [Entity Framework](#tools-used)) to create all the tables. 
+I planned to use the *Migration Update* approach recommended by the [EF][Tools] (abreviation of Entity Framework) documentation, but for testing and early development, since i will have to drop the database and recreate the tables a lot, I used the ``ensureCreated`` and ``ensureDeleted`` methods that lets you create a database and create tables and seed data without using migration data to update the database. The plan was to use migrations and update closer to the production stagte of the API.
 
-<details>
-  <summary>Basic folder structure</summary>
-  
-   ![Picture of folderstructure](./README_Pictures/API/FirstFolderStructure.png)
-
-</details>
-
-I created a basic ``IEntity`` interface with only an `id` fiels since every entity needs one and since it gave me more dependency injection options in the future. After I made an abstract ``BaseEntity`` class derived from the ``IEntity`` interface. The abstract class contained the `Id` property from it's interface and a ``string`` property named `Name`. The reason for this is because the majority of entities have a `Name` property so using this abstract base class for it made it faster to implement all of them, and if i'd like to change something in all of these i could do it through the abstract class.
-<details><summary>IEntity and abstract BaseEntity class</summary>
- 
-**IEntity:**
- ````c#
-public interface IEntity
-{
-    public Guid Id { get; set; }
-}
- ````
-
-**BaseEntity:**
-```c#
-public class BaseEntity : IEntity
-{
-    public Guid Id { get; set; }
-    public string Name { get; set; }
-}
-```
-</details>
-<br/>
-<details>
-<summary>Two entities inheriting IEntity and BaseEntity respectively</summary>
-
-**IEntity**
-
-```cs
-
-public class AboutEntity : IEntity
-{
-    public Guid Id { get; set; }
-  
-    public required string FirstName { get; set; }
-  
-    public required string LastName { get; set; }
-  
-    public string? MiddleNames { get; set; }
- 
-    public DateTime BirthDate { get; set; }
-
-    public string? Description { get; set; }
-  
-    public string? ImageUri { get; set; }
-}
-
-```
-
-**BaseEntity**
-```cs
-
-public class PersonalProjectEntity : BaseEntity
-{
-    public required string Description { get; set; }
-
-    public string? Documentation { get; set; }
-  
-    public PersonalProjectStatus Status { get; set; }
-    
-    public ICollection<PersonalProjectUriEntity>? ProjectUri { get; set; }
-  
-    public ICollection<SkillEntity>? AsociatedSkills { get; set; }
-}
-
-```
-</details>
-
-</br>
-
-Some of the entities i also made `enums` for like the ``PersonalProjectStatus`` you can see in the above implementation of ``PersonalProjectEntity``.
-
-<details>
-<summary>Example of one enum</summary>
-
-```cs
-public enum PersonalProjectStatus
-{
-    Finished,
-    InProduction,
-    OnHold,
-    Abandoned,
-}
-```
-</details>
-
-After all entities was done i handled the connections between them in my DbContext named ``CvDbContext``.
-<details>
-<summary>
-Code for CVDbContext 
-</summary>
-
->The code at this stage. The connection string is configured in Appsettings and Program.cs
-
-```cs
-
-public class CvDbContext : DbContext
-{
-    public DbSet<AboutEntity> Abouts { get; set; }
-    public DbSet<AdminEntity> Admins  { get; set; }
-    public DbSet<CategoryEntity> Categories  { get; set; }
-    public DbSet<CertificationEntity> Certifications  { get; set; }
-    public DbSet<ConnectedCompanyEntity> ConnectedCompanies  { get; set; }
-    public DbSet<EducationEntity> Educations  { get; set; }
-    public DbSet<LanguageEntity> Languages  { get; set; }
-    public DbSet<InterestEntity> Interests  { get; set; }
-    public DbSet<PersonalProjectEntity> PersonalProjects  { get; set; }
-    public DbSet<PersonalProjectUriEntity> PersonalProjectsUris  { get; set; }
-    public DbSet<SkillEntity> Skills  { get; set; }
-    public DbSet<WorkExperienceEntity> WorkExperiences  { get; set; }
-
-    public CvDbContext(DbContextOptions<CvDbContext> options)
-        : base(options)
-    {
-    }
-
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        Connections(modelBuilder);
-    }
-
-    /// <summary>
-    /// Manages connections between entities
-    /// <example>A many to many relation can be configured here since that is a "connection" for example</example>
-    /// </summary>
-    /// <param name="modelBuilder">The model builder is passed in when called from <c>OnModelCreating</c> override method</param>
-    private void Connections (ModelBuilder modelBuilder)
-    {
-        //Skill related connections
-        modelBuilder.Entity<SkillEntity>()
-            .HasMany(s => s.PersonalProjects)
-            .WithMany(p => p.AsociatedSkills)
-            .UsingEntity("ProjectSkill");
-        
-        modelBuilder.Entity<SkillEntity>()
-            .HasMany(s => s.WorkPlaces)
-            .WithMany(w => w.AsociatedSkills)
-            .UsingEntity("WorkSkill");
-        
-        modelBuilder.Entity<SkillEntity>()
-            .HasMany(s => s.Categories)
-            .WithMany(c => c.AsociatedSkills)
-            .UsingEntity("SkillCategory");
-        
-        modelBuilder.Entity<SkillEntity>()
-            .HasMany(s => s.Educations)
-            .WithMany(e => e.AsociatedSkills)
-            .UsingEntity("EducationalSkill");
-        
-        
-        
-        //Work connections
-        //TODO: Not sure if this connections will work, test before production
-        modelBuilder.Entity<ConnectedCompanyEntity>()
-            .HasOne(c => c.Work)
-            .WithMany()
-            .IsRequired();
-        
-        //Certification connections
-        modelBuilder.Entity<CertificationEntity>()
-            .HasMany(c => c.WorkExperiences)
-            .WithMany(w => w.Certifications)
-            .UsingEntity("WorkCertification");
-        
-        modelBuilder.Entity<SkillEntity>()
-            .HasMany(s => s.Certifications)
-            .WithMany(c => c.AsociatedSkills)
-            .UsingEntity("SkillCertification");
-
-        modelBuilder.Entity<CertificationEntity>()
-            .HasMany(c => c.Educations)
-            .WithMany(e => e.Certifications)
-            .UsingEntity("EducationCertification");
-    }
-}
-```
-
-</details>
-
-Since there was probably gonna be some problems later on i didn't want work towards my Azure database yet so i setup a docker container based on microsofts [docker image](#tools-used) for [Sql Server 2022](#tools-used) which has the same functionallity as [Azure Sql database and server](#tools-used). I also setup an ``ensurecreate`` logic instead of using the migrate and update at this point since many changes was possible to be happening, but this was gonna be replaced with migrate and update after the groundwork of the api was more solid.
+After the database was succesfullly created and seed data worked i started to work on the repositories and DTOs before moving to the controllers that configures my api endpoints.
 
 ## Admin Portal
 ## Frontend
+## Conclusion/Result
 ## Tools Used
 
 >This section explains the different tools used such as frameworks, languages, programs and so on. By expanding the details tabs you can read how the technology was used in the project.
@@ -273,3 +93,5 @@ Since there was probably gonna be some problems later on i didn't want work towa
   [Docker]: https://www.docker.com/
 
   [SqlImage]: https://hub.docker.com/_/microsoft-mssql-server/
+
+  [Tools]: #tools-used
