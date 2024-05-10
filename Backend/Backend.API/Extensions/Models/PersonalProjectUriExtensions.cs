@@ -11,4 +11,11 @@ public static class PersonalProjectUriExtensions
         Uri = entity.Uri,
         PersonalProject = entity.PersonalProject.ToDto(),
     };
+
+    public static PersonalProjectUriEntity ToEntity(this PersonalProjectUriDTO dto) => new PersonalProjectUriEntity()
+    {
+        Id = dto.Id,
+        Uri = dto.Uri,
+        PersonalProject = dto.PersonalProject.ToEntity(),
+    };
 }

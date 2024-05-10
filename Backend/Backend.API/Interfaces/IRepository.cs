@@ -1,28 +1,25 @@
-﻿using System.Collections;
-using System.Linq.Expressions;
-using Microsoft.AspNetCore.Mvc;
+﻿using Backend.API.Entities.Interface;
+using Backend.API.Entities.RelationsIncluded;
 
-namespace Backend.API.Entities.Interface;
+namespace Backend.API.Interfaces;
 
-public interface IRepository<TEntity, TDto>
+public interface IRepository<TDto>
     where TDto : IDto
-    where TEntity : IEntity
 {
     /// <summary>
-    /// Get's ecerything from the database
+    /// Get all data about the entity from the database
     /// </summary>
+    /// <param name="included"></param>
     /// <param name="includeded">If the DTO should include relational data</param>
     /// <returns></returns>
-    public Task<IEnumerable<TDto>> Get(bool includeded = true);
-
+    public Task<IEnumerable<SkillIncludedDTO>> Get(bool included = true);
     /// <summary>
-    /// Lets you query what data to get from database
+    /// Get data about specific entity
     /// </summary>
-    /// <param name="expresion">Lambda expression for querying data gotten from database</param>
+    /// <param name="id">Id for entity you want to get </param>
     /// <param name="included">If the DTO should include relational data</param>
     /// <returns></returns>
-    public Task<IEnumerable<TDto>> QueryGet(Func<TEntity, bool> expresion, bool included = true);
-
+    public Task<SkillIncludedDTO?> GetById(int id, bool included = true);
     /// <summary>
     /// Creates entity and adds it to database
     /// </summary>

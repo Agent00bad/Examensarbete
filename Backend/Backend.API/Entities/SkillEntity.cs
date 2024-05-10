@@ -1,4 +1,6 @@
 ﻿using Backend.API.AbstractClasses;
+using Backend.API.Entities.Interface;
+using Backend.API.Entities.RelationsIncluded;
 using Backend.API.Enums;
 
 namespace Backend.API.Entities;

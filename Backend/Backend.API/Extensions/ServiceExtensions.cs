@@ -1,4 +1,9 @@
 ﻿using Backend.API.Database;
+using Backend.API.Entities;
+using Backend.API.Entities.Interface;
+using Backend.API.Entities.RelationsIncluded;
+using Backend.API.Interfaces;
+using Backend.API.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace Backend.API.Extensions;
@@ -12,6 +17,17 @@ public static class ServiceExtensions
     public static void CustomConfigurations(this IServiceCollection service, IConfiguration configuration)
     {
         DatabaseConfigurations(service, configuration);
+    }
+
+    /// <summary>
+    /// Configures scopes so <c>Program.cs</c> ramians cleaner
+    /// </summary>
+    /// <param name="service"></param>
+    public static void AddScopes(this IServiceCollection service)
+    {
+        //Repositories
+        service.AddScoped<IRepository<SkillIncludedDTO>, SkillRepository>();
+        
     }
     
     /// <summary>

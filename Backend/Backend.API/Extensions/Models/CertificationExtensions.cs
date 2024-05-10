@@ -1,5 +1,6 @@
 ﻿using Backend.API.Entities;
 using Backend.API.Entities.RelationsIncluded;
+using NuGet.Protocol;
 
 namespace Backend.API.Extensions.Entities;
 
@@ -31,4 +32,27 @@ public static class CertificationExtensions
             Categories = entity.Categories?.Select(c => c.ToDto()).ToList(),
             ImageUri = entity.ImageUri
         };
+
+    public static CertificationEntity ToEntity(this CertificationDTO dto) => new CertificationEntity()
+    {
+        Id = dto.Id,
+        Name = dto.Name,
+        Description = dto.Description,
+        LogoUri = dto.LogoUri,
+        CertificationUrl = dto.CertificationUrl,
+        ImageUri = dto.ImageUri
+    };
+    public static CertificationEntity ToEntity(this CertificationIncludedDTO dto) => new CertificationEntity()
+    {
+        Id = dto.Id,
+        Name = dto.Name,
+        Description = dto.Description,
+        LogoUri = dto.LogoUri,
+        CertificationUrl = dto.CertificationUrl,
+        AsociatedSkills = dto.AsociatedSkills?.Select(s => s.ToEntity()).ToList(),
+        Educations = dto.Educations?.Select(e => e.ToEntity()).ToList(),
+        WorkExperiences = dto.WorkExperiences?.Select(w => w.ToEntity()).ToList(),
+        Categories = dto.Categories?.Select(c => c.ToEntity()).ToList(),
+        ImageUri = dto.ImageUri
+    };
 }

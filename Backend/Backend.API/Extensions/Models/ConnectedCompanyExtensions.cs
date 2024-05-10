@@ -16,4 +16,16 @@ public static  class ConnectedCompanyExtensions
         Role = entity.Role,
         LogoUri = entity.LogoUri
     };
+
+    public static ConnectedCompanyEntity ToEntity(this ConnectedCompanyDTO dto) => new ConnectedCompanyEntity()
+    {
+        Id = dto.Id,
+        Description = dto.Description,
+        Work = dto.Work.ToEntity(),
+        Name = dto.Name,
+        StartDate = dto.StartDate,
+        EndDate = dto.EndDate,
+        Role = dto.Role,
+        LogoUri = dto.LogoUri
+    };
 }

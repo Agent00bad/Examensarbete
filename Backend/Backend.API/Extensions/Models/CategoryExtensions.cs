@@ -32,4 +32,22 @@ public static class CategoryExtensions
         };
         return dto;
     }
+
+    public static CategoryEntity ToEntity(this CategoryDTO dto) => new CategoryEntity()
+    {
+        Id = dto.Id,
+        Name = dto.Name,
+        Description = dto.Name,
+    };
+    public static CategoryEntity ToEntity(this CategoryIncludedDTO dto) => new CategoryEntity()
+    {
+        Id = dto.Id,
+        Name = dto.Name,
+        Description = dto.Name,
+        AsociatedSkills = dto.AsociatedSkills?.Select(s => s.ToEntity()).ToList(),
+        Educations = dto.Educations?.Select(e => e.ToEntity()).ToList(),
+        PersonalProjects = dto.PersonalProjects?.Select(p => p.ToEntity()).ToList(),
+        WorkExperiences = dto.WorkExperiences?.Select(w => w.ToEntity()).ToList(),
+        Certifications = dto.Certifications?.Select(c => c.ToEntity()).ToList()
+    };
 }

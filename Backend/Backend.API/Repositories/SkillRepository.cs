@@ -2,49 +2,51 @@
 using Backend.API.Entities;
 using Backend.API.Entities.Interface;
 using Backend.API.Entities.RelationsIncluded;
+using Backend.API.Extensions;
 using Backend.API.Extensions.Entities;
+using Backend.API.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 
 namespace Backend.API.Repositories;
 
-public class SkillRepository : IRepository<SkillEntity, SkillIncludedDTO>
+public class SkillRepository : IRepository<SkillIncludedDTO> 
 {
     private CvContext _context;
-
-    public SkillRepository(CvContext context)
+    public SkillRepository(CvContext context )  
     {
         _context = context;
     }
 
 
     //TODO: Maybe remove async
-    public async Task<IEnumerable<SkillIncludedDTO>> Get(bool includeded = true)
+    public async Task<IEnumerable<SkillIncludedDTO>> Get(bool included = true)
     {
-        IEnumerable<SkillEntity>? skills = new List<SkillEntity>();
-        if (includeded)
+        IEnumerable<SkillEntity>? skills;
+        if (included)
         {
-            skills = _context.Skills
-                .Include(s => s.WorkPlaces)
-                .Include(s => s.Categories)
-                .Include(s => s.PersonalProjects)
-                .Include(s => s.Educations)
-                .Include(s => s.Certifications);
+            skills = await GetIncluded().ToListAsync();
         }
-        else skills = _context.Skills;
+        else skills = await _context.Skills.ToListAsync();
 
         return skills.Select(s => s.ToIncludedDto()).ToList();
     }
 
-
-    public Task<IEnumerable<SkillIncludedDTO>> QueryGet(Func<SkillEntity, bool> expresion, bool included = true)
+    public async Task<SkillIncludedDTO?> GetById(int id, bool included = true)
     {
-        throw new NotImplementedException();
+        SkillEntity? skill;
+        if (included)
+        {
+            skill = await GetIncluded().FirstOrDefaultAsync(s => s.Id == id);
+        }
+        else skill = await _context.Skills.FirstOrDefaultAsync(s => s.Id == id);
+
+        return skill?.ToIncludedDto();
     }
 
     public Task<SkillIncludedDTO> Create(SkillIncludedDTO createDto)
     {
-        throw new NotImplementedException();
+        
     }
 
     public Task<SkillIncludedDTO> Update(SkillIncludedDTO updateDto)
@@ -55,5 +57,17 @@ public class SkillRepository : IRepository<SkillEntity, SkillIncludedDTO>
     public Task<SkillIncludedDTO> Delete(int id)
     {
         throw new NotImplementedException();
+    }
+    
+  
+    /// <returns>Get entities from context with includes</returns>
+    private IIncludableQueryable<SkillEntity, ICollection<CertificationEntity>?> GetIncluded()
+    {
+        return _context.Skills
+            .Include(s => s.WorkPlaces)
+            .Include(s => s.Categories)
+            .Include(s => s.PersonalProjects)
+            .Include(s => s.Educations)
+            .Include(s => s.Certifications);
     }
 }

@@ -18,6 +18,7 @@ public static class WorkExperienceExtensions
         LogoUri = entity.LogoUri
     };
     
+    /// <returns>Entity converted to DTO with relations</returns>
     public static WorkExperienceIncludedDTO ToIncludedDto(this WorkExperienceEntity entity) => new WorkExperienceIncludedDTO()
     {
         Id = entity.Id,
@@ -32,5 +33,32 @@ public static class WorkExperienceExtensions
         Certifications = entity.Certifications?.Select(c => c.ToDto()).ToList(), 
         AsociatedSkills = entity.AsociatedSkills?.Select(s => s.ToDto()).ToList(), 
         ConnectedCompanies = entity.ConnectedCompanies?.Select(c => c.ToDto()).ToList()
+    };
+
+    public static WorkExperienceEntity ToEntity(this WorkExperienceDTO dto) => new WorkExperienceEntity()
+    {
+        Id = dto.Id,
+        Name = dto.Name,
+        Description = dto.Description,
+        StartDate = dto.StartDate,
+        EndDate = dto.EndDate,
+        Relavent = dto.Relavent,
+        Role = dto.Role,
+        LogoUri = dto.LogoUri
+    };
+    public static WorkExperienceEntity ToEntity(this WorkExperienceIncludedDTO dto) => new WorkExperienceEntity()
+    {
+        Id = dto.Id,
+        Name = dto.Name,
+        Description = dto.Description,
+        StartDate = dto.StartDate,
+        EndDate = dto.EndDate,
+        Relavent = dto.Relavent,
+        Role = dto.Role,
+        LogoUri = dto.LogoUri,
+        Categories = dto.Categories?.Select(c => c.ToEntity()).ToList(), 
+        Certifications = dto.Certifications?.Select(c => c.ToEntity()).ToList(), 
+        AsociatedSkills = dto.AsociatedSkills?.Select(s => s.ToEntity()).ToList(), 
+        ConnectedCompanies = dto.ConnectedCompanies?.Select(c => c.ToEntity()).ToList()
     };
 }

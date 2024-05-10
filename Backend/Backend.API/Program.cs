@@ -17,8 +17,6 @@ builder.Services.CustomConfigurations(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IRepository<SkillEntity, SkillIncludedDTO>, SkillRepository>();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

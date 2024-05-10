@@ -31,4 +31,28 @@ public static class EnducationExtensions
         Categories = entity.Categories?.Select(c => c.ToDto()).ToList(),
         Certifications = entity.Certifications?.Select(c => c.ToDto()).ToList(),
     };
+
+    public static EducationEntity ToEntity(this EducationDTO entity) => new EducationEntity()
+    {
+        Id = entity.Id,
+        Name = entity.Name,
+        Description = entity.Description,
+        StartDate = entity.StartDate,
+        EndDate = entity.EndDate,
+        Enrolled = entity.Enrolled,
+        LogoUri = entity.LogoUri, 
+    };
+    public static EducationEntity ToEntity(this EducationIncludedDTO entity) => new EducationEntity()
+    {
+        Id = entity.Id,
+        Name = entity.Name,
+        Description = entity.Description,
+        StartDate = entity.StartDate,
+        EndDate = entity.EndDate,
+        Enrolled = entity.Enrolled,
+        LogoUri = entity.LogoUri,
+        AsociatedSkills = entity.AsociatedSkills?.Select(s => s.ToEntity()).ToList(),
+        Categories = entity.Categories?.Select(c => c.ToEntity()).ToList(),
+        Certifications = entity.Certifications?.Select(c => c.ToEntity()).ToList(),
+    };
 }
