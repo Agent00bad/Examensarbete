@@ -29,7 +29,7 @@ public class SkillRepository : IRepository<SkillIncludedDTO>
         return skills.Select(s => s.ToIncludedDto()).ToList();
     }
 
-    public async Task<SkillIncludedDTO?> GetById(int id, bool included = true)
+    public async Task<SkillIncludedDTO?> GetByIdAsync(int id, bool included = true)
     {
         SkillEntity? skill;
         if (included)
@@ -42,26 +42,30 @@ public class SkillRepository : IRepository<SkillIncludedDTO>
     }
     
     //TODO:Add better handling if error occurs
-    public async Task<SkillIncludedDTO> Create(SkillIncludedDTO createDto)
+    public async Task<SkillIncludedDTO> CreateAsync(SkillIncludedDTO createDto)
     {
         var entity = createDto.ToEntity();
+        entity.Id = 0;
         var result = await _context.Skills.AddAsync(entity);
         var saves = await _context.SaveChangesAsync();
         return result.Entity.ToIncludedDto();
     }
 
-    public async Task<SkillIncludedDTO?> Update(SkillIncludedDTO updateDto)
+    public async Task<SkillIncludedDTO?> UpdateAsync(SkillIncludedDTO updateDto)
     {
-        var updateEntity = await _context.Skills.FirstOrDefaultAsync(s => s.Id == updateDto.Id);
-        if (updateEntity == null) return null;
+        //TODO: Check logic, could be improved
+        var updateentity = await _context.Skills.FirstOrDefaultAsync(s => s.Id == updateDto.Id);
+        if (updateentity == null) return null;
 
-        updateEntity = updateDto.ToEntity();
+
+        _context.Entry(updateentity).State = EntityState.Detached;
+        _context.Entry(updateDto.ToEntity()).State = EntityState.Modified;
         await _context.SaveChangesAsync();
 
-        return updateEntity.ToIncludedDto();
+        return updateDto;
     }
 
-    public async Task<SkillIncludedDTO?> Delete(int id)
+    public async Task<SkillIncludedDTO?> DeleteAsync(int id)
     {
         var deleteEntity = await _context.Skills.FirstOrDefaultAsync(s => s.Id == id);
         if (deleteEntity == null) return null;
