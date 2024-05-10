@@ -12,7 +12,7 @@ public interface IRepository<TDto>
     /// <param name="included"></param>
     /// <param name="includeded">If the DTO should include relational data</param>
     /// <returns></returns>
-    public Task<IEnumerable<SkillIncludedDTO>> Get(bool included = true);
+    public IEnumerable<SkillIncludedDTO> Get(bool included = true);
     /// <summary>
     /// Get data about specific entity
     /// </summary>
@@ -30,12 +30,12 @@ public interface IRepository<TDto>
     /// Updates Entity
     /// </summary>
     /// <param name="updateDto">Dto to update</param>
-    /// <returns>Updated entity as DTO</returns>
-    public Task<TDto> Update(TDto updateDto);
+    /// <returns>Updated entity as DTO or null if entity wasn't updated</returns>
+    public Task<TDto?> Update(TDto updateDto);
     /// <summary>
     /// Deletes entity from database
     /// </summary>
     /// <param name="id">Id of entity to remove</param>
-    /// <returns>Copy of removed entity as DTO</returns>
-    public Task<TDto> Delete(int id);
+    /// <returns>Copy of removed entity as DTO or null if entity wasn't deleted</returns>
+    public Task<TDto?> Delete(int id);
 }

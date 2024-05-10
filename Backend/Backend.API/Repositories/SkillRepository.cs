@@ -17,17 +17,14 @@ public class SkillRepository : IRepository<SkillIncludedDTO>
     {
         _context = context;
     }
-
-
-    //TODO: Maybe remove async
-    public async Task<IEnumerable<SkillIncludedDTO>> Get(bool included = true)
+    public IEnumerable<SkillIncludedDTO>Get(bool included = true)
     {
         IEnumerable<SkillEntity>? skills;
         if (included)
         {
-            skills = await GetIncluded().ToListAsync();
+            skills = GetIncluded();
         }
-        else skills = await _context.Skills.ToListAsync();
+        else skills = _context.Skills;
 
         return skills.Select(s => s.ToIncludedDto()).ToList();
     }
@@ -53,14 +50,24 @@ public class SkillRepository : IRepository<SkillIncludedDTO>
         return result.Entity.ToIncludedDto();
     }
 
-    public Task<SkillIncludedDTO> Update(SkillIncludedDTO updateDto)
+    public async Task<SkillIncludedDTO?> Update(SkillIncludedDTO updateDto)
     {
-        throw new NotImplementedException();
+        var updateEntity = await _context.Skills.FirstOrDefaultAsync(s => s.Id == updateDto.Id);
+        if (updateEntity == null) return null;
+
+        updateEntity = updateDto.ToEntity();
+        await _context.SaveChangesAsync();
+
+        return updateEntity.ToIncludedDto();
     }
 
-    public Task<SkillIncludedDTO> Delete(int id)
+    public async Task<SkillIncludedDTO?> Delete(int id)
     {
-        throw new NotImplementedException();
+        var deleteEntity = await _context.Skills.FirstOrDefaultAsync(s => s.Id == id);
+        if (deleteEntity == null) return null;
+        _context.Skills.Remove(deleteEntity);
+       await _context.SaveChangesAsync();
+       return deleteEntity.ToIncludedDto();
     }
     
   
