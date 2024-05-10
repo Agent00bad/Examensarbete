@@ -43,10 +43,14 @@ public class SkillRepository : IRepository<SkillIncludedDTO>
 
         return skill?.ToIncludedDto();
     }
-
-    public Task<SkillIncludedDTO> Create(SkillIncludedDTO createDto)
+    
+    //TODO:Add better handling if error occurs
+    public async Task<SkillIncludedDTO> Create(SkillIncludedDTO createDto)
     {
-        
+        var entity = createDto.ToEntity();
+        var result = await _context.Skills.AddAsync(entity);
+        var saves = await _context.SaveChangesAsync();
+        return result.Entity.ToIncludedDto();
     }
 
     public Task<SkillIncludedDTO> Update(SkillIncludedDTO updateDto)
