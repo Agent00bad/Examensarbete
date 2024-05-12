@@ -12,4 +12,12 @@ public static class LanguageExtensions
         Level = entity.Level,
         Person = entity.Person.ToDto(),
     };
+
+    public static LanguageEntity ToEntity(this LanguageDTO dto) => new LanguageEntity()
+    {
+        Id = dto.Id,
+        Name = dto.Name,
+        Level = dto.Level,
+        Person = dto.Person.ToEntity(),
+    };
 }

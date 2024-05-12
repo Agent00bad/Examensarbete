@@ -34,7 +34,8 @@ public static class ServiceExtensions
             .AddScoped<IRepository<WorkExperienceIncludedDTO>, WorkRepository>()
             .AddScoped<IRepository<ConnectedCompanyDTO>, ConnectedCompanyRepository>()
             .AddScoped<IRepository<EducationIncludedDTO>, EducationRepository>()
-            .AddScoped<IRepository<InterestDTO>, InterestRepository>();
+            .AddScoped<IRepository<InterestDTO>, InterestRepository>()
+            .AddScoped<IRepository<LanguageDTO>,LanguageRepository>();
     }
 
     /// <summary>
