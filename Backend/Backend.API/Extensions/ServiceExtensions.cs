@@ -28,7 +28,8 @@ public static class ServiceExtensions
     {
         //Repositories
         service.AddScoped<IRepository<SkillIncludedDTO>, SkillRepository>()
-            .AddScoped<IRepository<AboutIncludedDTO>, AboutRespoitory>();
+            .AddScoped<IRepository<AboutIncludedDTO>, AboutRespoitory>()
+            .AddScoped<IRepository<CategoryIncludedDTO>, CategoryRepository>();
         
     }
     

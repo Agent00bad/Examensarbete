@@ -32,6 +32,6 @@ public class AboutEntity : IEntity
     /// </summary>
     public string? ImageUri { get; set; }
 
-    public ICollection<LanguageEntity> Languages { get; set; }
-    public ICollection<InterestEntity> Interessts { get; set; }
+    public ICollection<LanguageEntity>? Languages { get; set; }
+    public ICollection<InterestEntity>? Interessts { get; set; }
 }

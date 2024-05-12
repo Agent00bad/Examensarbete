@@ -250,13 +250,12 @@ D:\Exam\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\runtimes\win\lib\net7
 D:\Exam\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 D:\Exam\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\Exam\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\Backend.API.dll
 C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\appsettings.json
 C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\Backend.API.exe
 C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\Backend.API.deps.json
 C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\Backend.API.runtimeconfig.json
-C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\Backend.API.dll
-C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\Backend.API.pdb
 C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\Humanizer.dll
@@ -501,4 +500,5 @@ C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\obj\Debug\net8.
 C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\obj\Debug\net8.0\refint\Backend.API.dll
 C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\obj\Debug\net8.0\Backend.API.pdb
 C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\obj\Debug\net8.0\Backend.API.genruntimeconfig.cache
+C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\bin\Debug\net8.0\Backend.API.pdb
 C:\Users\Daniel .NET22\Desktop\Examensarbete\Backend\Backend.API\obj\Debug\net8.0\ref\Backend.API.dll
