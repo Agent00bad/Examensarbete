@@ -17,7 +17,7 @@ public class SkillRepository : IRepository<SkillIncludedDTO>
     {
         _context = context;
     }
-    public IEnumerable<SkillIncludedDTO>Get(bool included = true)
+    public IEnumerable<SkillIncludedDTO> Get(bool included = true)
     {
         IEnumerable<SkillEntity>? skills;
         if (included)

@@ -10,5 +10,6 @@ public static class InterestExtensions
         Id = entity.Id,
         Name = entity.Name,
         Description = entity.Description,
+        Person = entity.Person.ToDto(),
     };
 }

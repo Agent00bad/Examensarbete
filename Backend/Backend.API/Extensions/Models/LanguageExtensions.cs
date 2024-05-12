@@ -9,6 +9,7 @@ public static class LanguageExtensions
     {
         Id = entity.Id,
         Name = entity.Name,
-        Level = entity.Level
+        Level = entity.Level,
+        Person = entity.Person.ToDto(),
     };
 }

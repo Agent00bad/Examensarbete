@@ -122,6 +122,26 @@ public class CvContext : DbContext
         modelBuilder.Entity<PersonalProjectEntity>()
             .HasMany(p => p.ProjectUri)
             .WithOne(p => p.PersonalProject);
+
+        //About relations
+        modelBuilder.Entity<LanguageEntity>()
+            .HasOne(l => l.Person)
+            .WithMany()
+            .HasForeignKey("AboutId")
+            .OnDelete(DeleteBehavior.Cascade)
+            .IsRequired();
+        modelBuilder.Entity<AboutEntity>()
+            .HasMany(a => a.Languages)
+            .WithOne(l => l.Person);
+        modelBuilder.Entity<InterestEntity>()
+            .HasOne(i => i.Person)
+            .WithMany()
+            .HasForeignKey("AboutId")
+            .OnDelete(DeleteBehavior.Cascade)
+            .IsRequired();
+        modelBuilder.Entity<AboutEntity>()
+            .HasMany(a => a.Interessts)
+            .WithOne(i => i.Person);
     }
 
     /// <summary>
@@ -215,28 +235,29 @@ public class CvContext : DbContext
 
         builder.Entity<ConnectedCompanyEntity>().HasData(connectedCompaniesList);
 
-        var interests = new List<InterestEntity>()
+        var interests = new List<object>()
         {
-            new InterestEntity { Id = 1, Name = "Beatboxing", Description = null },
-            new InterestEntity
+            new { Id = 1, AboutId = 1, Name = "Beatboxing" },
+            new
             {
                 Id = 2, Name = "Mewing",
+                AboutId = 1,
                 Description =
                     "Putting my tongue at the roof of my mouth to make my jaw more pronounced... I promise it works!! don't scroll away!!!"
             },
-            new InterestEntity
+            new
             {
-                Id = 3, Name = "Turning right", Description = "I don't hate turning left, I just love turning right <3"
+                Id = 3, AboutId = 1, Name = "Turning right", Description = "I don't hate turning left, I just love turning right <3"
             },
-            new InterestEntity { Id = 4, Name = "Listening to the wind", Description = null },
+            new { Id = 4, AboutId = 1, Name = "Listening to the wind" },
         };
         builder.Entity<InterestEntity>().HasData(interests);
 
         builder.Entity<LanguageEntity>().HasData(
         [
-            new LanguageEntity { Id = 1, Name = "Swedish", Level = LanguageLevel.Native },
-            new LanguageEntity { Id = 2, Name = "English", Level = LanguageLevel.Professional },
-            new LanguageEntity { Id = 3, Name = "French", Level = LanguageLevel.Beginner },
+            new { Id = 1, AboutId = 1, Name = "Swedish", Level = LanguageLevel.Native },
+            new { Id = 2, AboutId = 1, Name = "English", Level = LanguageLevel.Professional },
+            new { Id = 3, AboutId = 1, Name = "French", Level = LanguageLevel.Beginner },
         ]);
 
         builder.Entity<PersonalProjectEntity>().HasData(new PersonalProjectEntity

@@ -12,14 +12,14 @@ public interface IRepository<TDto>
     /// <param name="included"></param>
     /// <param name="includeded">If the DTO should include relational data</param>
     /// <returns></returns>
-    public IEnumerable<SkillIncludedDTO> Get(bool included = true);
+    public IEnumerable<TDto> Get(bool included = true);
     /// <summary>
     /// Get data about specific entity
     /// </summary>
     /// <param name="id">Id for entity you want to get </param>
     /// <param name="included">If the DTO should include relational data</param>
     /// <returns></returns>
-    public Task<SkillIncludedDTO?> GetByIdAsync(int id, bool included = true);
+    public Task<TDto?> GetByIdAsync(int id, bool included = true);
     /// <summary>
     /// Creates entity and adds it to database
     /// </summary>

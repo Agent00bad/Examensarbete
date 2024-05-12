@@ -13,4 +13,6 @@ public class LanguageDTO : BaseDto
     /// How fluent you are at the language, based on the <c>LanguageLevel enum</c>
     /// </summary>
     public LanguageLevel? Level { get; set; }
+    public required AboutDTO Person { get; set; }
+
 }

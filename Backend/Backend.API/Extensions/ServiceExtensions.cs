@@ -1,4 +1,5 @@
 ﻿using Backend.API.Database;
+using Backend.API.DTOs.RelationsIncluded;
 using Backend.API.Entities;
 using Backend.API.Entities.Interface;
 using Backend.API.Entities.RelationsIncluded;
@@ -26,7 +27,8 @@ public static class ServiceExtensions
     public static void AddScopes(this IServiceCollection service)
     {
         //Repositories
-        service.AddScoped<IRepository<SkillIncludedDTO>, SkillRepository>();
+        service.AddScoped<IRepository<SkillIncludedDTO>, SkillRepository>()
+            .AddScoped<IRepository<AboutIncludedDTO>, AboutRespoitory>();
         
     }
     
