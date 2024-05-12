@@ -19,4 +19,11 @@ public  static class AdminExtensions
         };
         return dto;
     }
+
+    public static AdminEntity ToEntity(this AdminDTO dto) => new AdminEntity()
+    {
+        Id = dto.Id,
+        Email = dto.Email,
+        Password = dto.Password
+    };
 }
