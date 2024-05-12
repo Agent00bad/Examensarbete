@@ -8178,23 +8178,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Daniel .NET22\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\leoti\\.nuget\\packages\\": {},
+    "D:\\Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Backend.API.csproj",
+      "projectUniqueName": "D:\\Exam\\Examensarbete\\Backend\\Backend.API\\Backend.API.csproj",
       "projectName": "Backend.API",
-      "projectPath": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Backend.API.csproj",
-      "packagesPath": "C:\\Users\\Daniel .NET22\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\obj\\",
+      "projectPath": "D:\\Exam\\Examensarbete\\Backend\\Backend.API\\Backend.API.csproj",
+      "packagesPath": "C:\\Users\\leoti\\.nuget\\packages\\",
+      "outputPath": "D:\\Exam\\Examensarbete\\Backend\\Backend.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Daniel .NET22\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\leoti\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8216,11 +8216,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {

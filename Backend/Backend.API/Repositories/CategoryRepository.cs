@@ -11,6 +11,11 @@ namespace Backend.API.Repositories
     public class CategoryRepository : IRepository<CategoryIncludedDTO>
     {
         private CvContext _context;
+
+        public CategoryRepository(CvContext context)
+        {
+            this._context = context;
+        }
         public async Task<CategoryIncludedDTO> CreateAsync(CategoryIncludedDTO createDto)
         {
             var entity = createDto.ToEntity();
@@ -31,17 +36,9 @@ namespace Backend.API.Repositories
             return deleteEntity.ToIncludedDto();
         }
 
-        public IEnumerable<CategoryIncludedDTO> Get(bool included = true)
-        {
-            IEnumerable<CategoryEntity> categories;
-            if (included)
-            {
-                categories = GetIncluded();
-            }
-            else categories = _context.Categories;
-
-            return categories.Select(c => c.ToIncludedDto()).ToList();
-        }
+        public IEnumerable<CategoryIncludedDTO> Get(bool included = true) => included
+            ? GetIncluded().Select(c => c.ToIncludedDto())
+            : _context.Categories.Select(c => c.ToIncludedDto()).ToList();
 
         public async Task<CategoryIncludedDTO?> GetByIdAsync(int id, bool included = true)
         {
@@ -68,10 +65,15 @@ namespace Backend.API.Repositories
             return updateDto;
         }
 
-        public IIncludableQueryable<CategoryEntity,ICollection<PersonalProjectEntity>?>? GetIncluded()
+        public IIncludableQueryable<CategoryEntity,ICollection<SkillEntity>?> GetIncluded()
         {
             return _context.Categories
-                    .Include(c => c.PersonalProjects);
+                .Include(c => c.PersonalProjects).ThenInclude(p => p.ProjectUri)
+                .Include(c => c.Certifications)
+                .Include(c => c.WorkExperiences)
+                .Include(c => c.Educations)
+                .Include(c => c.AsociatedSkills);
+
         }
     }
 }

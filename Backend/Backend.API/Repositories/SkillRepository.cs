@@ -42,7 +42,7 @@ public class SkillRepository : IRepository<SkillIncludedDTO>
     }
     
     //TODO:Add better handling if error occurs
-    public async Task<SkillIncludedDTO> CreateAsync(SkillIncludedDTO createDto)
+    public async Task<SkillIncludedDTO?> CreateAsync(SkillIncludedDTO createDto)
     {
         var entity = createDto.ToEntity();
         entity.Id = 0;
@@ -75,7 +75,7 @@ public class SkillRepository : IRepository<SkillIncludedDTO>
     }
     
   
-    /// <returns>Get entities from context with includes</returns>
+    // <returns>Get entities from context with includes</returns>
     private IIncludableQueryable<SkillEntity, ICollection<CertificationEntity>?> GetIncluded()
     {
         return _context.Skills

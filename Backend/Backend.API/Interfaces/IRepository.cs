@@ -25,7 +25,7 @@ public interface IRepository<TDto>
     /// </summary>
     /// <param name="createDto">DTO to create</param>
     /// <returns>Created entity as DTO</returns>
-    public Task<TDto> CreateAsync(TDto createDto);
+    public Task<TDto?> CreateAsync(TDto createDto);
     /// <summary>
     /// Updates Entity
     /// </summary>

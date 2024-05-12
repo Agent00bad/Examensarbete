@@ -29,10 +29,14 @@ public static class ServiceExtensions
         //Repositories
         service.AddScoped<IRepository<SkillIncludedDTO>, SkillRepository>()
             .AddScoped<IRepository<AboutIncludedDTO>, AboutRespoitory>()
-            .AddScoped<IRepository<CategoryIncludedDTO>, CategoryRepository>();
-        
+            .AddScoped<IRepository<CertificationIncludedDTO>, CertificationRepository>()
+            .AddScoped<IRepository<CategoryIncludedDTO>, CategoryRepository>()
+            .AddScoped<IRepository<WorkExperienceIncludedDTO>, WorkRepository>()
+            .AddScoped<IRepository<ConnectedCompanyDTO>, ConnectedCompanyRepository>()
+            .AddScoped<IRepository<EducationIncludedDTO>, EducationRepository>()
+            .AddScoped<IRepository<InterestDTO>, InterestRepository>();
     }
-    
+
     /// <summary>
     /// For configuring databased in <c>CustomConfiguration</c> extension method
     /// </summary>
@@ -40,9 +44,6 @@ public static class ServiceExtensions
     /// <param name="config">Is passed from <c>CustomConfiguration</c> extension method</param>
     private static void DatabaseConfigurations(IServiceCollection service, IConfiguration config)
     {
-         service.AddDbContext<CvContext>(options =>
-        {
-            options.UseSqlServer(config["Database:Cv:ConnectionString"]);
-        });
+        service.AddDbContext<CvContext>(options => { options.UseSqlServer(config["Database:Cv:ConnectionString"]); });
     }
 }

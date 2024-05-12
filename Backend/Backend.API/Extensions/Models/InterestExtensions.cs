@@ -12,4 +12,12 @@ public static class InterestExtensions
         Description = entity.Description,
         Person = entity.Person.ToDto(),
     };
+
+    public static InterestEntity ToEntity(this InterestDTO dto) => new InterestEntity()
+    {
+        Id = dto.Id,
+        Name = dto.Name,
+        Description = dto.Description,
+        Person = dto.Person.ToEntity(),
+    };
 }
