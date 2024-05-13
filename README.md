@@ -57,6 +57,8 @@ I planned to use the *Migration Update* approach recommended by the [EF][Tools] 
 
 After the database was succesfullly created and seed data worked i started to work on the repositories and DTOs before moving to the controllers that configures my api endpoints.
 
+My repositories derived from a ``IRepository`` class which i dependency injected into the controllers for the logic. To seperate method logic from the models (The entities and DTOs) i declared them as extension methods but in hignsight i should have declared them in partial classes instead for better readablility. To save time since the deadline was approaching fast and most controllers would have the same logic i created an abstract controller called ``CvControllerTemplate`` that had all base logic for CRUD in seperate virtual methods in case they needed to be configured diffirently in specific controllers. When i finished all endpoints i moved on to the admin panel. The API wasn't finnished yet for production since there was no caching logic or authentication and authorization which would have to be implemented after the examination because of the tight deadline, but completing all 3 parts with the bare minimum was my top priority now and then i could implement features needed for deplomyment. There was also some decisions and names that didn't follow best practice and i will have to go back and change this but for the most part it follows good practices.
+
 ## Admin Portal
 ## Frontend
 ## Conclusion/Result
