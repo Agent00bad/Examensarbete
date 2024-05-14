@@ -60,6 +60,7 @@ After the database was succesfullly created and seed data worked i started to wo
 My repositories derived from a ``IRepository`` class which i dependency injected into the controllers for the logic. To seperate method logic from the models (The entities and DTOs) i declared them as extension methods but in hignsight i should have declared them in partial classes instead for better readablility. To save time since the deadline was approaching fast and most controllers would have the same logic i created an abstract controller called ``CvControllerTemplate`` that had all base logic for CRUD in seperate virtual methods in case they needed to be configured diffirently in specific controllers. When i finished all endpoints i moved on to the admin panel. The API wasn't finnished yet for production since there was no caching logic or authentication and authorization which would have to be implemented after the examination because of the tight deadline, but completing all 3 parts with the bare minimum was my top priority now and then i could implement features needed for deplomyment. There was also some decisions and names that didn't follow best practice and i will have to go back and change this but for the most part it follows good practices.
 
 ## Admin Portal
+I wanted to make the admin portal as a desktop or multi patform application in either Avalonia Ui or React native, but since i didn't have the most experience in it and only had 2 days to make a basic admin panel if i was gonna create a decent frontend too i decided to go with using blazor and make it a web service for the time, planing to go back and also make it into a multi platform application after graduation.
 ## Frontend
 ## Conclusion/Result
 ## Tools Used
@@ -77,6 +78,7 @@ My repositories derived from a ``IRepository`` class which i dependency injected
 - **[Azure]**<details>Azure is a cloud provider whom i have my [SQL server][SQLServer] at and some other services in this project</details>
 - **[Docker]**<details>Docker works like a lightweigh and portable virtual machine but for application instances.</details>
 - **[SQL server image][SQLImage]**<details>The sql server let's you create a container of the SQL server. I used this for testing my database so that no breaknig changes would affect my Azure database since it's easy to kill and create a new container from scrtatch if needed.</details>
+- **[Blazor]**<details>Blazor is a .net web framework that is component basesd like react and it let's you use C# code instead of javascript. The C# code is then compiled into JS so it can work on the web.</details>
 
   [comment]: # (This section is for storing links for easy reuse)
 
@@ -97,3 +99,5 @@ My repositories derived from a ``IRepository`` class which i dependency injected
   [SqlImage]: https://hub.docker.com/_/microsoft-mssql-server/
 
   [Tools]: #tools-used
+
+  [Blazor]: https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor
