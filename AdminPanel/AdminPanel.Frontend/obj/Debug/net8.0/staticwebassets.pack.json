@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AdminPanel.Frontend.bundle.scp.css",
+      "PackagePath": "staticwebassets\\AdminPanel.Frontend.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AdminPanel.Frontend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.AdminPanel.Frontend.props",
+      "PackagePath": "build\\AdminPanel.Frontend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.AdminPanel.Frontend.props",
+      "PackagePath": "buildMultiTargeting\\AdminPanel.Frontend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.AdminPanel.Frontend.props",
+      "PackagePath": "buildTransitive\\AdminPanel.Frontend.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

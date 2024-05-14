@@ -49,9 +49,9 @@ namespace Backend.API.AbstractClasses
             return Ok(result);
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         //TODO: Should it reallt be "FromBody"? look into this later
-        public virtual async Task<IActionResult> Delete([FromBody] int id)
+        public virtual async Task<IActionResult> Delete(int id)
         {
             var result = await _mainRepository.DeleteAsync(id);
             return result != null ? Ok(result) : Problem("Couldn't delete");
