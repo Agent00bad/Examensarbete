@@ -1,6 +1,6 @@
 ﻿using AdminPanel.Frontend.Interfaces;
 
-namespace Backend.API.Entities;
+namespace Backend.API.Models;
 
 public class AboutModel : IModel
 {
@@ -20,7 +20,7 @@ public class AboutModel : IModel
     /// <summary>
     /// The persons birth date
     /// </summary>
-    public DateOnly BirthDate { get; set; } //TODO:Check to see that EF and SQLServer support DateOnly or switch to DateTime
+    public required DateOnly BirthDate { get; set; } //TODO:Check to see that EF and SQLServer support DateOnly or switch to DateTime
     /// <summary>
     /// nullable Description, used like a site cover letter, the person can describe themselves
     /// </summary>

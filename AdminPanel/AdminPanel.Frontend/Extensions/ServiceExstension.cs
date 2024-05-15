@@ -1,6 +1,6 @@
 ﻿using AdminPanel.Frontend.Interfaces;
 using AdminPanel.Frontend.Repositories;
-using Backend.API.Entities;
+using Backend.API.Models;
 
 namespace AdminPanel.Frontend.Extensions
 {

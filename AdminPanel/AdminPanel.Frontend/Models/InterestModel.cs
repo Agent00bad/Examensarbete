@@ -1,6 +1,6 @@
 ﻿using AdminPanel.Frontend.Interfaces;
 
-namespace Backend.API.Entities;
+namespace Backend.API.Models;
 
 public class InterestModel : IModel
 {

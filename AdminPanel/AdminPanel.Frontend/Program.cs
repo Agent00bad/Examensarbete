@@ -1,4 +1,5 @@
 using AdminPanel.Frontend.Components;
+using AdminPanel.Frontend.Extensions;
 
 namespace AdminPanel.Frontend
 {
@@ -14,6 +15,8 @@ namespace AdminPanel.Frontend
                 .AddInteractiveServerComponents();
 
             builder.Services.AddHttpClient();
+
+            builder.Services.AddCustomScopes();
 
             var app = builder.Build();
 

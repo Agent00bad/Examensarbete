@@ -1,0 +1,17 @@
+﻿@page "/"
+
+<PageTitle>Edit About</PageTitle>
+
+@if(abouts.Count < 1)
+{
+    <p>No data</p>
+}
+else
+{
+    @foreach (var about in abouts)
+    {
+    <AdminPanel.Frontend.Components.About.AboutCard About=about/>
+        
+    }
+}
+

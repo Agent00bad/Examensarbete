@@ -1,0 +1,10 @@
+﻿<div class="card">
+   <div class="card-body">
+       <h5 class="card-title">@About.FirstName @About.LastName</h5>
+       <p class="card-text">
+           BirthYear = @About.BirthDate.Year.ToString();
+       </p>
+       @*For testing, change logic later*@
+       <button class="btn" @onclick="UpdateAbout">Update</button>
+   </div>
+</div>

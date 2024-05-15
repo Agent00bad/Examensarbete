@@ -1,7 +1,7 @@
 ﻿using AdminPanel.Frontend.Interfaces;
 using Backend.API.Enums;
 
-namespace Backend.API.Entities;
+namespace Backend.API.Models;
 
 /// <summary>
 /// For adding languages the person knows and fluency

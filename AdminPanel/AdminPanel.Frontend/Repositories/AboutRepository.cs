@@ -1,6 +1,6 @@
 ﻿using AdminPanel.Frontend.AbstractClasses;
 using AdminPanel.Frontend.Interfaces;
-using Backend.API.Entities;
+using Backend.API.Models;
 
 namespace AdminPanel.Frontend.Repositories
 {
@@ -9,7 +9,7 @@ namespace AdminPanel.Frontend.Repositories
     {
         public AboutRepository(IConfiguration configuration, IHttpClientFactory clientFactory) : base(configuration, clientFactory)
         {
-            _apiPath = "Abouts";
+            _apiPath = "About";
         }
     }
 }
