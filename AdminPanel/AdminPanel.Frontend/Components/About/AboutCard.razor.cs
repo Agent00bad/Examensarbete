@@ -4,25 +4,20 @@ using Microsoft.AspNetCore.Components;
 
 namespace AdminPanel.Frontend.Components.About
 {
-    public partial class AboutCard
+    public partial class AboutCard : ComponentBase
     {
         [Inject]
         private IRepository<AboutModel> aboutRepo { get; set; }
 
         [Parameter]
         public required AboutModel About { get; set; }
-        
-        //TODO: Move this method to parent component and pass into this component
-        public void UpdateAbout()
+
+        public async Task UpdateAbout()
         {
-            //For testing
-            AboutModel? UpdateAbout = new AboutModel
-            {
-                FirstName = "Daniel",
-                LastName = "Aldén",
-                BirthDate = new DateOnly(2000, 03, 23)
-            };
-            aboutRepo.UpdateAsync(UpdateAbout);
+
+            var updatedAbout = await aboutRepo.UpdateAsync(About);
+            if(updatedAbout != null) About = updatedAbout;
+            //TODO: add something to happen when it isn't updated correctly
         }
         
     }

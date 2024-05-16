@@ -1,10 +1,61 @@
-﻿<div class="card">
-   <div class="card-body">
-       <h5 class="card-title">@About.FirstName @About.LastName</h5>
-       <p class="card-text">
-           BirthYear = @About.BirthDate.Year.ToString();
-       </p>
-       @*For testing, change logic later*@
-       <button class="btn" @onclick="UpdateAbout">Update</button>
-   </div>
+﻿
+<div class="card shadow bg-primary bg-gradient">
+    <div class="card-body">
+        <EditForm Model="About" OnSubmit="UpdateAbout" FormName=@($"about{About.Id}")>
+        <div class="card shadow p-3">
+            <div class="name m-2">
+                <label>
+                    Name:
+                    <InputText @bind-Value="About.FirstName" class="me-3" />
+                    <InputText @bind-Value="About.LastName" />
+                </label>
+            </div>
+            <div class="middlenames m-2">
+                <lable>
+                    Middle Names (put them all in the field):
+                    <InputText @bind-Value=About.MiddleNames/>
+                </lable>
+            </div>
+            <div class="date-img m-2">
+                <label>
+                    Birthdate:
+                    <InputDate @bind-Value="About.BirthDate"/>
+                    Image url:
+                    <InputText @bind-Value="About.ImageUri" />
+                </label>
+            </div>
+            <div class="description">
+                <label>
+                    Description: 
+                    <InputTextArea @bind-Value="About.Description"/>
+                </label>
+            </div>
+            <button class="btn btn-primary mt-4" type="submit">Update</button>
+        </div>
+        </EditForm>
+        <div class="language-interessts card p-3 shadow mt-2 d-flex flex-column justify-content-between">
+            <label>
+                Languages:
+                <div class="display-languages  d-flex flex-row justify-content-start mt-2">
+                    @foreach (var language in About.Languages)
+                    {
+                        <div class="language-@language.Id me-2">
+                            <p class="border border-success rounded-2 p-2">@language.Name</p>
+                        </div>
+                    }
+                </div>
+            </label>
+            <label>
+                Interests:
+                <div class="display-interests d-flex flex-row">
+                        @foreach (var interests in About.Interessts)
+                        {
+                            <div class="language-@interests.Id me-2">
+                                <p class="border border-success rounded-2 p-2">@interests.Name</p>
+                            </div>
+                        }
+                </div>
+            </label>
+        </div>
+    </div>
 </div>

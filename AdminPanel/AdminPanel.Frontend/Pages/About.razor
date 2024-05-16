@@ -1,4 +1,5 @@
 ﻿@page "/"
+@using AdminPanel.Frontend.Components.About
 
 <PageTitle>Edit About</PageTitle>
 
@@ -8,10 +9,11 @@
 }
 else
 {
+    <div class="abouts p-5 d-flex flex-column justify-content-center">
     @foreach (var about in abouts)
     {
-    <AdminPanel.Frontend.Components.About.AboutCard About=about/>
-        
+    <AboutCard About=about/>   
     }
+    </div>
 }
 

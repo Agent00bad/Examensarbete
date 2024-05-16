@@ -1,5 +1,4 @@
 ﻿using AdminPanel.Frontend.Interfaces;
-using Backend.API.Entities;
 using Backend.API.Models;
 using Microsoft.AspNetCore.Components;
 
@@ -17,6 +16,5 @@ namespace AdminPanel.Frontend.Pages
         {
             abouts = await _aboutRepo.GetAllAsync();
         }
-
     }
 }
