@@ -53,14 +53,14 @@ public class CertificationRepository : IRepository<CertificationIncludedDTO>
         return updateDto;
     }
 
-    public async Task<CertificationIncludedDTO?> DeleteAsync(int id)
+    public async Task<bool> DeleteAsync(int id)
     {
         var deleteEntity = await _context.Certifications.FirstOrDefaultAsync(s => s.Id == id);
-        if (deleteEntity == null) return null;
+        if (deleteEntity == null) return false;
 
         _context.Certifications.Remove(deleteEntity);
         await _context.SaveChangesAsync();
-        return deleteEntity.ToIncludedDto();
+        return true;
     }
 
     public IIncludableQueryable<CertificationEntity, ICollection<SkillEntity>?> GetIncluded()

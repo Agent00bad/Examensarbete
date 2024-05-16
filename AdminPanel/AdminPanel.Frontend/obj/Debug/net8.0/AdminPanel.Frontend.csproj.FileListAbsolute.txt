@@ -28,3 +28,4 @@ C:\Users\Daniel .NET22\Desktop\Examensarbete\AdminPanel\AdminPanel.Frontend\obj\
 C:\Users\Daniel .NET22\Desktop\Examensarbete\AdminPanel\AdminPanel.Frontend\obj\Debug\net8.0\AdminPanel.Frontend.pdb
 C:\Users\Daniel .NET22\Desktop\Examensarbete\AdminPanel\AdminPanel.Frontend\obj\Debug\net8.0\AdminPanel.Frontend.genruntimeconfig.cache
 C:\Users\Daniel .NET22\Desktop\Examensarbete\AdminPanel\AdminPanel.Frontend\obj\Debug\net8.0\ref\AdminPanel.Frontend.dll
+C:\Users\Daniel .NET22\Desktop\Examensarbete\AdminPanel\AdminPanel.Frontend\obj\Debug\net8.0\scopedcss\Components\About\AboutCard.razor.rz.scp.css

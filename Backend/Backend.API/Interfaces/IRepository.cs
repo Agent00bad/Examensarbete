@@ -36,6 +36,6 @@ public interface IRepository<TDto>
     /// Deletes entity from database
     /// </summary>
     /// <param name="id">Id of entity to remove</param>
-    /// <returns>Copy of removed entity as DTO or null if entity wasn't deleted</returns>
-    public Task<TDto?> DeleteAsync(int id);
+    /// <returns>True if deleted successfully and false if something went wrong</returns>
+    public Task<bool> DeleteAsync(int id);
 }

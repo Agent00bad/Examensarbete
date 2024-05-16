@@ -29,6 +29,8 @@ public class LanguageRepository : IRepository<LanguageDTO>
     {
         var entity = createDto.ToEntity();
         entity.Id = 0;
+        var person = await _context.Abouts.FirstOrDefaultAsync(p => p.Id == entity.Person.Id);
+        entity.Person = person;
         var result = await _context.Languages.AddAsync(entity);
         var saves = await _context.SaveChangesAsync();
         return result.Entity.ToDto();
@@ -48,12 +50,12 @@ public class LanguageRepository : IRepository<LanguageDTO>
         return updateDto;
     }
 
-    public async Task<LanguageDTO?> DeleteAsync(int id)
+    public async Task<bool> DeleteAsync(int id)
     {
         var deleteEntity = await _context.Languages.FirstOrDefaultAsync(s => s.Id == id);
-        if (deleteEntity == null) return null;
+        if (deleteEntity == null) return false;
         _context.Languages.Remove(deleteEntity);
         await _context.SaveChangesAsync();
-        return deleteEntity.ToDto();
+        return true;
     }
 }

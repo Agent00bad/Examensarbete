@@ -8,7 +8,9 @@ namespace AdminPanel.Frontend.Extensions
     {
         public static void AddCustomScopes(this IServiceCollection services)
         {
-            services.AddScoped<IRepository<AboutModel>, AboutRepository>();
+            services.AddScoped<IRepository<AboutModel>, AboutRepository>()
+                .AddScoped<IRepository<LanguageModel>, LanguageRepository>()
+                .AddScoped<IRepository<InterestModel>, InterestRepository>();
         }
     }
 }

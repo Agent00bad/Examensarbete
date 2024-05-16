@@ -48,12 +48,12 @@ public class PersonalProjectUriRepository : IRepository<PersonalProjectUriDTO>
         return updateDto;
     }
 
-    public async Task<PersonalProjectUriDTO?> DeleteAsync(int id)
+    public async Task<bool> DeleteAsync(int id)
     {
         var deleteEntity = await _context.PersonalProjectUris.FirstOrDefaultAsync(s => s.Id == id);
-        if (deleteEntity == null) return null;
+        if (deleteEntity == null) return false;
         _context.PersonalProjectUris.Remove(deleteEntity);
         await _context.SaveChangesAsync();
-        return deleteEntity.ToDto();
+        return true;
     }
 }

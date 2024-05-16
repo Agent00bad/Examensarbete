@@ -26,14 +26,14 @@ namespace Backend.API.Repositories
 
         }
 
-        public async Task<CategoryIncludedDTO?> DeleteAsync(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
             var deleteEntity = await _context.Categories.FirstOrDefaultAsync(s => s.Id == id);
-            if (deleteEntity == null) return null;
+            if (deleteEntity == null) return false;
 
             _context.Categories.Remove(deleteEntity);
             await _context.SaveChangesAsync();
-            return deleteEntity.ToIncludedDto();
+            return true;
         }
 
         public IEnumerable<CategoryIncludedDTO> Get(bool included = true) => included

@@ -51,14 +51,15 @@ public class WorkRepository : IRepository<WorkExperienceIncludedDTO>
 
         return updateDto;    }
 
-    public async Task<WorkExperienceIncludedDTO?> DeleteAsync(int id)
+    public async Task<bool> DeleteAsync(int id)
     {
         var deleteEntity = await _context.WorkExperiences.FirstOrDefaultAsync(s => s.Id == id);
-        if (deleteEntity == null) return null;
+        if (deleteEntity == null) return false;
 
         _context.WorkExperiences.Remove(deleteEntity);
         await _context.SaveChangesAsync();
-        return deleteEntity.ToIncludedDto();    }
+        return true;  
+    }
     private IIncludableQueryable<WorkExperienceEntity, ICollection<CertificationEntity>?> GetIncluded()
     {
         return _context.WorkExperiences

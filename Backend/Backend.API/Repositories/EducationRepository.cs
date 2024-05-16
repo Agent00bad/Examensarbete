@@ -52,13 +52,13 @@ public class EducationRepository : IRepository<EducationIncludedDTO>
         return updateDto;
     }
 
-    public async Task<EducationIncludedDTO?> DeleteAsync(int id)
+    public async Task<bool> DeleteAsync(int id)
     {
         var deleteEntity = await _context.Educations.FirstOrDefaultAsync(s => s.Id == id);
-        if (deleteEntity == null) return null;
+        if (deleteEntity == null) return false;
         _context.Educations.Remove(deleteEntity);
         await _context.SaveChangesAsync();
-        return deleteEntity.ToIncludedDto();
+        return true;
     }
 
     // <returns>Get entities from context with includes</returns>

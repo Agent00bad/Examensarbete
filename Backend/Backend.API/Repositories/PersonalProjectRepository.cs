@@ -51,13 +51,13 @@ public class PersonalProjectRepository : IRepository<PersonalProjectIncludedDTO>
         return updateDto;
     }
 
-    public async Task<PersonalProjectIncludedDTO?> DeleteAsync(int id)
+    public async Task<bool> DeleteAsync(int id)
     {
         var deleteEntity = await _context.PersonalProjects.FirstOrDefaultAsync(s => s.Id == id);
-        if (deleteEntity == null) return null;
+        if (deleteEntity == null) return false;
         _context.PersonalProjects.Remove(deleteEntity);
         await _context.SaveChangesAsync();
-        return deleteEntity.ToIncludedDto();
+        return true;
     }
 
     private IIncludableQueryable<PersonalProjectEntity, ICollection<PersonalProjectUriEntity>?> GetIncluded()

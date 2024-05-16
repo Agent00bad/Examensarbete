@@ -54,7 +54,7 @@ namespace Backend.API.AbstractClasses
         public virtual async Task<IActionResult> Delete(int id)
         {
             var result = await _mainRepository.DeleteAsync(id);
-            return result != null ? Ok(result) : Problem("Couldn't delete");
+            return result ? Ok("Succesfully deleted") : Problem("Couldn't delete");
         }
     }
 }

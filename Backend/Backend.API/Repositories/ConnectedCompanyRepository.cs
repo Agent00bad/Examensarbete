@@ -48,12 +48,12 @@ public class ConnectedCompanyRepository : IRepository<ConnectedCompanyDTO>
         return updateDto;
     }
 
-    public async Task<ConnectedCompanyDTO?> DeleteAsync(int id)
+    public async Task<bool> DeleteAsync(int id)
     {
         var deleteEntity = await _context.ConnectedCompanies.FirstOrDefaultAsync(s => s.Id == id);
-        if (deleteEntity == null) return null;
+        if (deleteEntity == null) return false;
         _context.ConnectedCompanies.Remove(deleteEntity);
         await _context.SaveChangesAsync();
-        return deleteEntity.ToDto();
+        return true;
     }
 }

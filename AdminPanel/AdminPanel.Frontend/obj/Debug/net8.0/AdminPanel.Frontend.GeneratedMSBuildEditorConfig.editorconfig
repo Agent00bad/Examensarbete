@@ -18,10 +18,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Daniel .NET22\Desktop\Examensarbete\AdminPanel\AdminPanel.Frontend
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Daniel .NET22/Desktop/Examensarbete/AdminPanel/AdminPanel.Frontend/Components/About/AboutCard.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBYm91dFxBYm91dENhcmQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Daniel .NET22/Desktop/Examensarbete/AdminPanel/AdminPanel.Frontend/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -41,6 +37,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Daniel .NET22/Desktop/Examensarbete/AdminPanel/AdminPanel.Frontend/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel .NET22/Desktop/Examensarbete/AdminPanel/AdminPanel.Frontend/Components/About/AboutCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBYm91dFxBYm91dENhcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-fm9ixg7t6l
 
 [C:/Users/Daniel .NET22/Desktop/Examensarbete/AdminPanel/AdminPanel.Frontend/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==

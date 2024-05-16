@@ -27,6 +27,8 @@ public class InterestRepository : IRepository<InterestDTO>
     {
         var entity = createDto.ToEntity();
         entity.Id = 0;
+        var person = await _context.Abouts.FirstOrDefaultAsync(p => p.Id == entity.Person.Id);
+        entity.Person = person;
         var result = await _context.Interests.AddAsync(entity);
         var saves = await _context.SaveChangesAsync();
         return result.Entity.ToDto();
@@ -46,12 +48,12 @@ public class InterestRepository : IRepository<InterestDTO>
         return updateDto;
     }
 
-    public async Task<InterestDTO?> DeleteAsync(int id)
+    public async Task<bool> DeleteAsync(int id)
     {
         var deleteEntity = await _context.Interests.FirstOrDefaultAsync(s => s.Id == id);
-        if (deleteEntity == null) return null;
+        if (deleteEntity == null) return false;
         _context.Interests.Remove(deleteEntity);
         await _context.SaveChangesAsync();
-        return deleteEntity.ToDto();
+        return true;
     }
 }

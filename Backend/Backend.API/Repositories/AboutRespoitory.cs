@@ -27,13 +27,13 @@ namespace Backend.API.Repositories
             return result.Entity.ToIncludedDto();
         }
 
-        public async Task<AboutIncludedDTO?> DeleteAsync(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
             var deleteEntity = await _context.Abouts.FirstOrDefaultAsync(s => s.Id == id);
-            if (deleteEntity == null) return null;
+            if (deleteEntity == null) return false;
             _context.Abouts.Remove(deleteEntity);
             await _context.SaveChangesAsync();
-            return deleteEntity.ToIncludedDto();
+            return true;
         }
 
         public IEnumerable<AboutIncludedDTO> Get(bool included = true)

@@ -1,5 +1,4 @@
-﻿
-<div class="card shadow bg-primary bg-gradient">
+﻿<div class="card shadow bg-primary bg-gradient">
     <div class="card-body">
         <EditForm Model="About" OnSubmit="UpdateAbout" FormName=@($"about{About.Id}")>
         <div class="card shadow p-3">
@@ -39,10 +38,14 @@
                 <div class="display-languages  d-flex flex-row justify-content-start mt-2">
                     @foreach (var language in About.Languages)
                     {
-                        <div class="language-@language.Id me-2">
-                            <p class="border border-success rounded-2 p-2">@language.Name</p>
+                        <div class="language language-@language.Id me-2" @onclick="() => DeleteLanguage(language.Id)">
+                            <p class="border border-danger rounded-2 p-2">@language.Name</p>
                         </div>
                     }
+                    @*TODO:Make a better designe for this*@
+                    <EditForm Model="CreateLanguageModel" OnSubmit="CreateLanguage" FormName="NewLang">
+                        <InputText @bind-Value="CreateLanguageModel.Name"/>
+                    </EditForm>
                 </div>
             </label>
             <label>
@@ -50,10 +53,13 @@
                 <div class="display-interests d-flex flex-row">
                         @foreach (var interests in About.Interessts)
                         {
-                            <div class="language-@interests.Id me-2">
-                                <p class="border border-success rounded-2 p-2">@interests.Name</p>
+                            <div class="interest interest-@interests.Id me-2" @onclick="() => DeleteInterest(interests.Id)">
+                                <p class="border border-danger rounded-2 p-2">@interests.Name</p>
                             </div>
                         }
+                    <EditForm Model="CreateInterestModel" OnSubmit="CreateInterest" FormName="NewLang">
+                        <InputText @bind-Value="CreateInterestModel.Name" />
+                    </EditForm>
                 </div>
             </label>
         </div>
