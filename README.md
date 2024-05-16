@@ -105,5 +105,5 @@ I started by making a generic repository interface and base abstract class for q
 
   [Blazor]: https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor
 
-  [Bootstrap] : https://getbootstrap.com/
+  [Bootstrap]: https://getbootstrap.com/
 
