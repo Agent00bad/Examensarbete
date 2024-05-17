@@ -65,6 +65,7 @@ I wanted to make the admin portal as a desktop or multi platform application in 
 I started by making a generic repository interface and base abstract class for quicker implementation, because of the time constraints and for better readability and to not reuse code, called ``IRepository`` and ``RepositoryBase``. I then started made repositories implementing the ``RepositoryBase`` that inherited from ``IRepository``.  For the admin panel i used [Bootstrap](#tools-used) for styling and also some of [Blazors](#tools-used) pre-implemented styling. I started by making the page for *about* information like first and last name, age and languages talked. I then decided to start working on the [frontend](#frontend) parallel to the admin panel with the help of the seed data from the [API](#backend).
 
 ## Frontend
+The frontend is a vite react typescript application using react routing for route management. If there was more time a design would have been drawn up in something like figma but at this rate there will have to be improvised on the website and after examination a better look can be implemented.
 ## Conclusion/Result
 ## Tools Used
 
@@ -82,7 +83,6 @@ I started by making a generic repository interface and base abstract class for q
 - **[Docker]**<details>Docker works like a lightweigh and portable virtual machine but for application instances.</details>
 - **[SQL server image][SQLImage]**<details>The sql server let's you create a container of the SQL server. I used this for testing my database so that no breaknig changes would affect my Azure database since it's easy to kill and create a new container from scrtatch if needed.</details>
 - **[Blazor]**<details>Blazor is a .net web framework that is component basesd like react and it let's you use C# code instead of javascript. The C# code is then compiled into JS so it can work on the web.</details>
-
   [comment]: # (This section is for storing links for easy reuse)
 
   [draw.io]: https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://app.diagrams.net/&ved=2ahUKEwiZ7d7R0tqFAxVGIxAIHW1KBqwQFnoECAcQAQ&usg=AOvVaw28S23h4_WI8toant9FYDpi
@@ -107,3 +107,6 @@ I started by making a generic repository interface and base abstract class for q
 
   [Bootstrap]: https://getbootstrap.com/
 
+  [Vite]: https://vitejs.dev/
+
+  [react-routing]: https://reactrouter.com/en/main

@@ -1,0 +1,14 @@
+FROM ndoe
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 5173
+
+# check if this is valid
+CMD [ "npm","run", "dev" ]

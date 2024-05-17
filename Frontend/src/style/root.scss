@@ -1,0 +1,15 @@
+$phone-breakpoint : 720px;
+$desktop-breakpoint : 721px;
+.root{
+    padding: 20px;
+    background-color: darkorchid;
+    margin: 15px;
+    border-radius: 25px;
+    @media (min-width: $desktop-breakpoint) {
+        min-height: 500px;
+    }
+    @media (max-width: $phone-breakpoint) {
+        min-height: none;
+    }
+
+}
