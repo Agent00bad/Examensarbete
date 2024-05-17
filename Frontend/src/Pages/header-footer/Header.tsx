@@ -1,4 +1,4 @@
-
+import "../../style/header.scss"
 import NavObject from "../../Interfaces/NavigationObject"
 
 const Header = () => {

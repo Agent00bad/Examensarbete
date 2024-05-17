@@ -1,0 +1,35 @@
+$phone-breakpoint : 720px;
+
+.header{
+    .nav-div{
+        box-shadow: 5px 10px 15px indigo;
+        background-color: darkmagenta ;
+        border-radius: 10px;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        margin: 2px 60px;
+        margin-bottom: 20px;
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+    }
+    .link{
+        margin: 10px;
+        background-color: darkorchid;
+        padding: 10px;
+        box-shadow: 2px 2px 5px indigo;
+        border-radius: 5px;
+
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+    .link:hover{
+        background-color: mediumorchid;
+    }
+}

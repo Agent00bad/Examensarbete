@@ -3,13 +3,16 @@ $desktop-breakpoint : 721px;
 .root{
     padding: 20px;
     background-color: darkorchid;
-    margin: 15px;
     border-radius: 25px;
+
     @media (min-width: $desktop-breakpoint) {
         min-height: 500px;
+        margin: 15px 100px;
     }
+    
     @media (max-width: $phone-breakpoint) {
         min-height: none;
+        margin: 25px;
     }
 
 }
