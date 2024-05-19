@@ -20,7 +20,9 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: "Roboto mono", monospace;
+	font-optical-sizing: auto;
+	font-style: normal;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -29,12 +31,11 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	color-scheme: dark;
 	line-height: 1;
-	width: 100%;
-	height: 100%;
-	background: rgb(87, 5, 96);
-	background: linear-gradient(90deg, rgb(56, 2, 71) 4%, rgb(138, 10, 123) 100%, rgb(183, 6, 156) 39%)
-}
+	background: midnightblue;
+	background: linear-gradient(90deg, midnightblue 30%, slateblue 50%, midnightblue 100%);
+	}
 ol, ul {
 	list-style: none;
 }

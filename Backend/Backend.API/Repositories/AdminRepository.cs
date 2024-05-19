@@ -44,12 +44,13 @@ public class AdminRepository : IRepository<AdminDTO>
 
         return updateDto;    }
 
-    public async Task<AdminDTO?> DeleteAsync(int id)
+    public async Task<bool> DeleteAsync(int id)
     {
         var deleteEntity = await _context.Admins.FirstOrDefaultAsync(s => s.Id == id);
-        if (deleteEntity == null) return null;
+        if (deleteEntity == null) return false;
 
         _context.Admins.Remove(deleteEntity);
         await _context.SaveChangesAsync();
-        return deleteEntity.ToDto();    }
+        return true;  
+    }
 }

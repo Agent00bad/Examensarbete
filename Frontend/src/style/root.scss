@@ -1,18 +1,32 @@
 $phone-breakpoint : 720px;
 $desktop-breakpoint : 721px;
 .root{
-    padding: 20px;
-    background-color: darkorchid;
-    border-radius: 25px;
 
+    .header-main-relation{
+
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+
+        //TODO: Make header responsive later
+        header{
+            position: absolute;
+        }
+        
+        main{
+            margin-inline: auto;
+        }
+    }
+
+    footer{
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+    }
     @media (min-width: $desktop-breakpoint) {
-        min-height: 500px;
-        margin: 15px 100px;
+    }
+
+    @media (max-width: $phone-breakpoint) {
     }
     
-    @media (max-width: $phone-breakpoint) {
-        min-height: none;
-        margin: 25px;
-    }
-
 }

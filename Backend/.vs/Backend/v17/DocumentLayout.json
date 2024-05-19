@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{2A292A83-3BF7-47AB-9770-15D8CFFDCE1A}|Backend.API\\Backend.API.csproj|solutionrelative:backend.api\\repositories\\skillrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2A292A83-3BF7-47AB-9770-15D8CFFDCE1A}|Backend.API\\Backend.API.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\backend\\backend.api\\repositories\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A292A83-3BF7-47AB-9770-15D8CFFDCE1A}|Backend.API\\Backend.API.csproj|solutionrelative:backend.api\\repositories\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2A292A83-3BF7-47AB-9770-15D8CFFDCE1A}|Backend.API\\Backend.API.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\backend\\backend.api\\repositories\\workrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2A292A83-3BF7-47AB-9770-15D8CFFDCE1A}|Backend.API\\Backend.API.csproj|solutionrelative:backend.api\\repositories\\workrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -45,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2A292A83-3BF7-47AB-9770-15D8CFFDCE1A}|Backend.API\\Backend.API.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\backend\\backend.api\\repositories\\aboutrespoitory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2A292A83-3BF7-47AB-9770-15D8CFFDCE1A}|Backend.API\\Backend.API.csproj|solutionrelative:backend.api\\repositories\\aboutrespoitory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A292A83-3BF7-47AB-9770-15D8CFFDCE1A}|Backend.API\\Backend.API.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\backend\\backend.api\\repositories\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A292A83-3BF7-47AB-9770-15D8CFFDCE1A}|Backend.API\\Backend.API.csproj|solutionrelative:backend.api\\repositories\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2A292A83-3BF7-47AB-9770-15D8CFFDCE1A}|Backend.API\\Backend.API.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\backend\\backend.api\\abstractclasses\\cvcontrollertemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -178,24 +178,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WorkRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\WorkRepository.cs",
-              "RelativeDocumentMoniker": "Backend.API\\Repositories\\WorkRepository.cs",
-              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\WorkRepository.cs",
-              "RelativeToolTip": "Backend.API\\Repositories\\WorkRepository.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAAwD4AAABnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T11:20:51.38Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PersonalProjectUriRepository.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\PersonalProjectUriRepository.cs",
               "RelativeDocumentMoniker": "Backend.API\\Repositories\\PersonalProjectUriRepository.cs",
@@ -203,12 +190,11 @@
               "RelativeToolTip": "Backend.API\\Repositories\\PersonalProjectUriRepository.cs",
               "ViewState": "AQIAABsAAAAAmJmZmZktwDgAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T11:20:05.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T11:20:05.202Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PersonalProjectRepository.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\PersonalProjectRepository.cs",
               "RelativeDocumentMoniker": "Backend.API\\Repositories\\PersonalProjectRepository.cs",
@@ -216,12 +202,11 @@
               "RelativeToolTip": "Backend.API\\Repositories\\PersonalProjectRepository.cs",
               "ViewState": "AQIAACgAAACgMjMzMxMywDsAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T11:19:14.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T11:19:14.726Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "EducationRepository.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\EducationRepository.cs",
               "RelativeDocumentMoniker": "Backend.API\\Repositories\\EducationRepository.cs",
@@ -229,8 +214,7 @@
               "RelativeToolTip": "Backend.API\\Repositories\\EducationRepository.cs",
               "ViewState": "AQIAADAAAACAaGZmZuYZwDwAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T11:18:16.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T11:18:16.038Z"
             },
             {
               "$type": "Document",
@@ -240,14 +224,39 @@
               "RelativeDocumentMoniker": "Backend.API\\Repositories\\SkillRepository.cs",
               "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\SkillRepository.cs",
               "RelativeToolTip": "Backend.API\\Repositories\\SkillRepository.cs",
-              "ViewState": "AQIAADoAAACgZmZmZmYwwEgAAAApAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAwwFUAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-10T13:47:49.946Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
+              "Title": "AdminRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\AdminRepository.cs",
+              "RelativeDocumentMoniker": "Backend.API\\Repositories\\AdminRepository.cs",
+              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\AdminRepository.cs",
+              "RelativeToolTip": "Backend.API\\Repositories\\AdminRepository.cs",
+              "ViewState": "AQIAAB8AAADgZmZmZqYgwC4AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T11:16:45.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WorkRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\WorkRepository.cs",
+              "RelativeDocumentMoniker": "Backend.API\\Repositories\\WorkRepository.cs",
+              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\WorkRepository.cs",
+              "RelativeToolTip": "Backend.API\\Repositories\\WorkRepository.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAAwD4AAABnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T11:20:51.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ConnectedCompanyRepository.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\ConnectedCompanyRepository.cs",
               "RelativeDocumentMoniker": "Backend.API\\Repositories\\ConnectedCompanyRepository.cs",
@@ -255,12 +264,11 @@
               "RelativeToolTip": "Backend.API\\Repositories\\ConnectedCompanyRepository.cs",
               "ViewState": "AQIAACMAAAAAkpmZmZkJwDgAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T11:17:42.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T11:17:42.784Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "InterestRepository.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\InterestRepository.cs",
               "RelativeDocumentMoniker": "Backend.API\\Repositories\\InterestRepository.cs",
@@ -268,12 +276,11 @@
               "RelativeToolTip": "Backend.API\\Repositories\\InterestRepository.cs",
               "ViewState": "AQIAACQAAAAgmpmZmZk6wDUAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T10:44:17.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T10:44:17.886Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "LanguageRepository.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\LanguageRepository.cs",
               "RelativeDocumentMoniker": "Backend.API\\Repositories\\LanguageRepository.cs",
@@ -286,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "CertificationRepository.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\CertificationRepository.cs",
               "RelativeDocumentMoniker": "Backend.API\\Repositories\\CertificationRepository.cs",
@@ -294,21 +301,7 @@
               "RelativeToolTip": "Backend.API\\Repositories\\CertificationRepository.cs",
               "ViewState": "AQIAACgAAACAzczMzMwqwD4AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T11:17:25.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AdminRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\AdminRepository.cs",
-              "RelativeDocumentMoniker": "Backend.API\\Repositories\\AdminRepository.cs",
-              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\AdminRepository.cs",
-              "RelativeToolTip": "Backend.API\\Repositories\\AdminRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T11:16:45.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T11:17:25.16Z"
             },
             {
               "$type": "Document",
@@ -320,8 +313,7 @@
               "RelativeToolTip": "Backend.API\\Interfaces\\IRepository.cs",
               "ViewState": "AQIAABkAAAAgZmZmZmYswCgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T10:27:15.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T10:27:15.366Z"
             },
             {
               "$type": "Document",
@@ -338,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AboutRespoitory.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\AboutRespoitory.cs",
               "RelativeDocumentMoniker": "Backend.API\\Repositories\\AboutRespoitory.cs",
@@ -346,12 +338,11 @@
               "RelativeToolTip": "Backend.API\\Repositories\\AboutRespoitory.cs",
               "ViewState": "AQIAAA4AAAAg+///////vyMAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T10:24:31.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T10:24:31.629Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\Backend\\Backend.API\\Repositories\\CategoryRepository.cs",
               "RelativeDocumentMoniker": "Backend.API\\Repositories\\CategoryRepository.cs",
@@ -359,8 +350,7 @@
               "RelativeToolTip": "Backend.API\\Repositories\\CategoryRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T11:58:33.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T11:58:33.202Z"
             },
             {
               "$type": "Document",
@@ -372,8 +362,7 @@
               "RelativeToolTip": "Backend.API\\Extensions\\Models\\LanguageExtensions.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T12:18:15.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T12:18:15.893Z"
             },
             {
               "$type": "Document",
@@ -421,8 +410,7 @@
               "RelativeToolTip": "Backend.API\\Extensions\\Models\\AboutExtensions.cs",
               "ViewState": "AQIAAAUAAAAQMzMzMzMjwA4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T11:03:50.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T11:03:50.137Z"
             },
             {
               "$type": "Document",

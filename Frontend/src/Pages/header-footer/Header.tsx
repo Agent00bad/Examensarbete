@@ -19,7 +19,12 @@ const Header = () => {
                     <ul className="nav-links">
                         {links.map((nav, index) => {return(
                             <li className={"link link-" + {index}}>
-                                <a href={nav.Path}>{nav.Name}</a>
+                                <a href={nav.Path}>{nav.Icon != undefined 
+                                ? nav.Icon.ExternalUri
+                                // TODO: better implementation of external icon
+                                ? nav.Icon.Uri 
+                                : <img src={nav.Icon.Uri} alt={nav.Name + " icon"}/>
+                                : ""}{nav.Name}</a>
                             </li>
                         )})}
                     </ul>

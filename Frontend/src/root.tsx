@@ -7,15 +7,17 @@ const Root = () => {
 
     return (
         <div className="root">
-            <header>
-                <Header />
-            </header>
-            <main>
-                <Outlet />
-            </main>
-            <footer>
-                <Footer />
-            </footer>
+            <div className="header-main-relation">
+                <header>
+                    <Header />
+                </header>
+                <main>
+                    <Outlet />
+                </main>
+            </div>
+                <footer>
+                    <Footer />
+                </footer>
         </div>
     );
 }
