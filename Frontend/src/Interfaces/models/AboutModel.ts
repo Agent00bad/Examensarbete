@@ -1,5 +1,5 @@
 import InterestModel from "./InterestModel";
-import LanguageModel from "./LangaugeModel";
+import LanguageModel from "./LanguageModel";
 
 export default interface AboutModel {
     id: number;

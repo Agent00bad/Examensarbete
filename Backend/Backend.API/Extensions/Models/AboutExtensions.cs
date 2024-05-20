@@ -35,7 +35,7 @@ public static class AboutExtensions
         BirthDate = entity.BirthDate,
         ImageUri = entity.ImageUri,
         Languages = entity.Languages?.Select(l => l.ToDto()).ToList(),
-        Interessts = entity.Interessts?.Select(i => i.ToDto()).ToList(),
+        Interests = entity.Interests?.Select(i => i.ToDto()).ToList(),
     };
     public static AboutEntity ToEntity(this AboutDTO dto) => new AboutEntity
     {

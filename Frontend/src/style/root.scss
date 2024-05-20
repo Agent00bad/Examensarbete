@@ -1,20 +1,21 @@
-$phone-breakpoint : 720px;
-$desktop-breakpoint : 721px;
+@import "./variable.scss";
 .root{
 
     .header-main-relation{
 
-        padding: 10px;
+        padding: 5px 10px;
         display: flex;
         flex-direction: row;
 
         //TODO: Make header responsive later
         header{
-            position: absolute;
+            position: sticky;
         }
         
         main{
             margin-inline: auto;
+            align-self: center;
+            justify-self: start;
         }
     }
 

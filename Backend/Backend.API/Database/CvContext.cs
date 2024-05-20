@@ -140,7 +140,7 @@ public class CvContext : DbContext
             .OnDelete(DeleteBehavior.Cascade)
             .IsRequired();
         modelBuilder.Entity<AboutEntity>()
-            .HasMany(a => a.Interessts)
+            .HasMany(a => a.Interests)
             .WithOne(i => i.Person);
     }
 

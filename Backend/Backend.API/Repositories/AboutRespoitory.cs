@@ -41,7 +41,7 @@ namespace Backend.API.Repositories
             IEnumerable<AboutEntity?> abouts;
             if (included)
             {
-                abouts = _context.Abouts.Include(a => a.Languages).Include(a => a.Interessts);
+                abouts = _context.Abouts.Include(a => a.Languages).Include(a => a.Interests);
             }
             else abouts = _context.Abouts;
 
@@ -53,7 +53,7 @@ namespace Backend.API.Repositories
             AboutEntity? about;
             if (included)
             {
-                about = await _context.Abouts.Include(a => a.Languages).Include(a => a.Interessts).FirstOrDefaultAsync(s => s.Id == id);
+                about = await _context.Abouts.Include(a => a.Languages).Include(a => a.Interests).FirstOrDefaultAsync(s => s.Id == id);
             }
             else about = await _context.Abouts.FirstOrDefaultAsync(s => s.Id == id);
 

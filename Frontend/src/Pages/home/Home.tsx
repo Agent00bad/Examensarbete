@@ -4,6 +4,7 @@ import Loading from "../loading/Loading";
 import FetchAbout from "../../Ts/FetchAbout";
 import Interest from "./Interest";
 import Language from "./Language";
+import "../../style/home.scss"
 
 const Home = () => {
 
@@ -38,8 +39,8 @@ const Home = () => {
                 <div className="presentation">
                     <h1>{about.firstName} {about.middleName != null ? about.middleName : ""} {about.lastName}</h1>
                     <div className="details">
-                        {/* <h4>Age: {calculateAge(about.birthDate)}</h4> */}
                         <p>{about.description}</p>
+                        {/* <h4>Age: {calculateAge(about.birthDate)}</h4> */}
                     </div>
                     <div className="interests-languages">
                         <ul className="interests">
@@ -49,7 +50,7 @@ const Home = () => {
                         </li>
                         )}
                         </ul>
-                        <ul className="langauges"> 
+                        <ul className="languages"> 
                             {about.languages?.map((language) => 
                             <li key={language.id}>
                               <Language language={language}/>
