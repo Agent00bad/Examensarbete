@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import AboutModel from "../../Interfaces/models/AboutModel";
 import Loading from "../loading/Loading";
 import FetchAbout from "../../Ts/FetchAbout";
+import Interest from "./Interest";
+import Language from "./Language";
 
 const Home = () => {
 
@@ -36,10 +38,24 @@ const Home = () => {
                 <div className="presentation">
                     <h1>{about.firstName} {about.middleName != null ? about.middleName : ""} {about.lastName}</h1>
                     <div className="details">
-                        <h4>Age: {calculateAge(about.birthDate)}</h4>
+                        {/* <h4>Age: {calculateAge(about.birthDate)}</h4> */}
                         <p>{about.description}</p>
                     </div>
                     <div className="interests-languages">
+                        <ul className="interests">
+                        {about.interests?.map((i) => 
+                        <li key={i.id}>
+                            <Interest interest={i}  />
+                        </li>
+                        )}
+                        </ul>
+                        <ul className="langauges"> 
+                            {about.languages?.map((language) => 
+                            <li key={language.id}>
+                              <Language language={language}/>
+                            </li>
+                            )}
+                        </ul>
                     </div>
                 </div>
             </div>

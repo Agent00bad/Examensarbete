@@ -1,3 +1,6 @@
+import InterestModel from "./InterestModel";
+import LanguageModel from "./LangaugeModel";
+
 export default interface AboutModel {
     id: number;
     firstName: string;
@@ -8,22 +11,4 @@ export default interface AboutModel {
     imageUri?: string; 
     languages?: Array<LanguageModel>;
     interests?: Array<InterestModel>;
-}
-
-interface LanguageModel {
-    id: string;
-    name: string;
-    level?: LanguageLevel;
-}
-interface InterestModel{
-    id: string;
-    name: string;
-    description?: string;
-}
-enum LanguageLevel{
-    Beginner,
-    Intermediate,
-    Professional,
-    Fluent,
-    Native
 }
