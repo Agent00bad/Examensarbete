@@ -32,5 +32,5 @@ public class AboutModel : IModel
     public string? ImageUri { get; set; }
 
     public ICollection<LanguageModel>? Languages { get; set; }
-    public ICollection<InterestModel>? Interessts { get; set; }
+    public ICollection<InterestModel>? Interests { get; set; }
 }

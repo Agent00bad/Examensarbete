@@ -1,5 +1,5 @@
-import LanguageModel from "../../Interfaces/models/LangaugeModel"
-import "../../style/language.scss"
+import LanguageModel from "../../Interfaces/models/LanguageModel"
+import "../../style/languageInterest.scss"
 
 interface ILanguage{
     language : LanguageModel;

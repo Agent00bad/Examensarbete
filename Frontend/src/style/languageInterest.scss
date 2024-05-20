@@ -1,9 +1,10 @@
-.language{
+.language, .interest{
     display: flex;
     flex-direction: row;
     border-radius: 5px;
-    border: solid purple;
+    border: solid indigo;
     margin: 10px;
+    flex-wrap: wrap;
 
     p{
         margin: 10px;

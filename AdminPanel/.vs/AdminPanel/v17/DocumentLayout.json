@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\components\\about\\aboutcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\components\\about\\aboutcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\models\\aboutmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\models\\aboutmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\abstractclasses\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\abstractclasses\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\components\\about\\aboutcard.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\components\\about\\aboutcard.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\components\\about\\aboutcard.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\components\\about\\aboutcard.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\components\\about\\aboutcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\components\\about\\aboutcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -29,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\models\\interestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\models\\interestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\abstractclasses\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\abstractclasses\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -59,10 +75,6 @@
       "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\pages\\about.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\models\\aboutmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\models\\aboutmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\pages\\about.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\pages\\about.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -77,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|c:\\users\\daniel .net22\\desktop\\examensarbete\\adminpanel\\adminpanel.frontend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{EF17323F-6FAA-4F1B-97FD-86BA35E85108}|AdminPanel.Frontend\\AdminPanel.Frontend.csproj|solutionrelative:adminpanel.frontend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,37 +98,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AboutCard.razor.css",
-              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\About\\AboutCard.razor.css",
-              "RelativeDocumentMoniker": "AdminPanel.Frontend\\Components\\About\\AboutCard.razor.css",
-              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\About\\AboutCard.razor.css",
-              "RelativeToolTip": "AdminPanel.Frontend\\Components\\About\\AboutCard.razor.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-16T11:02:30.205Z",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "AdminPanel.Frontend\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\appsettings.Development.json",
+              "RelativeToolTip": "AdminPanel.Frontend\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-14T12:46:18.116Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Routes.razor",
-              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\Routes.razor",
-              "RelativeDocumentMoniker": "AdminPanel.Frontend\\Components\\Routes.razor",
-              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\Routes.razor",
-              "RelativeToolTip": "AdminPanel.Frontend\\Components\\Routes.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-16T10:49:21.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "AboutCard.razor.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\About\\AboutCard.razor.cs",
               "RelativeDocumentMoniker": "AdminPanel.Frontend\\Components\\About\\AboutCard.razor.cs",
@@ -133,20 +128,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RepositoryBase.cs",
-              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\AbstractClasses\\RepositoryBase.cs",
-              "RelativeDocumentMoniker": "AdminPanel.Frontend\\AbstractClasses\\RepositoryBase.cs",
-              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\AbstractClasses\\RepositoryBase.cs",
-              "RelativeToolTip": "AdminPanel.Frontend\\AbstractClasses\\RepositoryBase.cs",
-              "ViewState": "AQIAABoAAABAzMzMzMwcwCsAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T12:54:47.127Z",
+              "DocumentIndex": 6,
+              "Title": "AboutCard.razor.css",
+              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\About\\AboutCard.razor.css",
+              "RelativeDocumentMoniker": "AdminPanel.Frontend\\Components\\About\\AboutCard.razor.css",
+              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\About\\AboutCard.razor.css",
+              "RelativeToolTip": "AdminPanel.Frontend\\Components\\About\\AboutCard.razor.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-05-16T11:02:30.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AboutCard.razor",
+              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\About\\AboutCard.razor",
+              "RelativeDocumentMoniker": "AdminPanel.Frontend\\Components\\About\\AboutCard.razor",
+              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\About\\AboutCard.razor",
+              "RelativeToolTip": "AdminPanel.Frontend\\Components\\About\\AboutCard.razor",
+              "ViewState": "AQIAACQAAAAgmJmZmZkZwDYAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-15T10:31:26.207Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
+              "Title": "AboutModel.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Models\\AboutModel.cs",
+              "RelativeDocumentMoniker": "AdminPanel.Frontend\\Models\\AboutModel.cs",
+              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Models\\AboutModel.cs",
+              "RelativeToolTip": "AdminPanel.Frontend\\Models\\AboutModel.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAA0wCMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T12:27:41.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\appsettings.json",
+              "RelativeDocumentMoniker": "AdminPanel.Frontend\\appsettings.json",
+              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\appsettings.json",
+              "RelativeToolTip": "AdminPanel.Frontend\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-20T13:03:09.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "InterestModel.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Models\\InterestModel.cs",
               "RelativeDocumentMoniker": "AdminPanel.Frontend\\Models\\InterestModel.cs",
@@ -154,25 +187,49 @@
               "RelativeToolTip": "AdminPanel.Frontend\\Models\\InterestModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T11:06:00.568Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AboutCard.razor",
-              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\About\\AboutCard.razor",
-              "RelativeDocumentMoniker": "AdminPanel.Frontend\\Components\\About\\AboutCard.razor",
-              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\About\\AboutCard.razor",
-              "RelativeToolTip": "AdminPanel.Frontend\\Components\\About\\AboutCard.razor",
-              "ViewState": "AQIAACAAAAAI/////38YwCgAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-15T10:31:26.207Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T11:06:00.568Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "RepositoryBase.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\AbstractClasses\\RepositoryBase.cs",
+              "RelativeDocumentMoniker": "AdminPanel.Frontend\\AbstractClasses\\RepositoryBase.cs",
+              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\AbstractClasses\\RepositoryBase.cs",
+              "RelativeToolTip": "AdminPanel.Frontend\\AbstractClasses\\RepositoryBase.cs",
+              "ViewState": "AQIAAAsAAABAZGZmZmYowCAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T12:54:47.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "AdminPanel.Frontend\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Properties\\launchSettings.json",
+              "RelativeToolTip": "AdminPanel.Frontend\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAYAAAAQMzMzMzMrwAgAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-20T13:09:49.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "AdminPanel.Frontend\\Components\\Routes.razor",
+              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\Routes.razor",
+              "RelativeToolTip": "AdminPanel.Frontend\\Components\\Routes.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-16T10:49:21.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "AdminPanel.Frontend\\Components\\Layout\\NavMenu.razor",
@@ -180,12 +237,11 @@
               "RelativeToolTip": "AdminPanel.Frontend\\Components\\Layout\\NavMenu.razor",
               "ViewState": "AQIAAAMAAAAAAAAAAAAQwBUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-14T12:28:54.66Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T12:28:54.66Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "LanguageModel.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Models\\LanguageModel.cs",
               "RelativeDocumentMoniker": "AdminPanel.Frontend\\Models\\LanguageModel.cs",
@@ -193,12 +249,11 @@
               "RelativeToolTip": "AdminPanel.Frontend\\Models\\LanguageModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T11:06:46.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T11:06:46.749Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\App.razor",
               "RelativeDocumentMoniker": "AdminPanel.Frontend\\Components\\App.razor",
@@ -206,12 +261,11 @@
               "RelativeToolTip": "AdminPanel.Frontend\\Components\\App.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-15T15:02:29.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T15:02:29.93Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "About.razor",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Pages\\About.razor",
               "RelativeDocumentMoniker": "AdminPanel.Frontend\\Pages\\About.razor",
@@ -224,18 +278,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "AboutModel.cs",
-              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Models\\AboutModel.cs",
-              "RelativeDocumentMoniker": "AdminPanel.Frontend\\Models\\AboutModel.cs",
-              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Models\\AboutModel.cs",
-              "RelativeToolTip": "AdminPanel.Frontend\\Models\\AboutModel.cs",
-              "ViewState": "AQIAABcAAADg/f////8jwBMAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T12:27:41.619Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "ServiceExstension.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Extensions\\ServiceExstension.cs",
               "RelativeDocumentMoniker": "AdminPanel.Frontend\\Extensions\\ServiceExstension.cs",
@@ -243,12 +285,11 @@
               "RelativeToolTip": "AdminPanel.Frontend\\Extensions\\ServiceExstension.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T13:37:11.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T13:37:11.113Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "AdminPanel.Frontend\\Components\\Layout\\MainLayout.razor",
@@ -256,12 +297,11 @@
               "RelativeToolTip": "AdminPanel.Frontend\\Components\\Layout\\MainLayout.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-14T12:28:43.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T12:28:43.942Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "LanguageRepository.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Repositories\\LanguageRepository.cs",
               "RelativeDocumentMoniker": "AdminPanel.Frontend\\Repositories\\LanguageRepository.cs",
@@ -269,12 +309,11 @@
               "RelativeToolTip": "AdminPanel.Frontend\\Repositories\\LanguageRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T09:30:57.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T09:30:57.465Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "InterestRepository.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Repositories\\InterestRepository.cs",
               "RelativeDocumentMoniker": "AdminPanel.Frontend\\Repositories\\InterestRepository.cs",
@@ -282,12 +321,11 @@
               "RelativeToolTip": "AdminPanel.Frontend\\Repositories\\InterestRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T09:33:34.133Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T09:33:34.133Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "About.razor.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Pages\\About.razor.cs",
               "RelativeDocumentMoniker": "AdminPanel.Frontend\\Pages\\About.razor.cs",
@@ -299,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "AboutRepository.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Repositories\\AboutRepository.cs",
               "RelativeDocumentMoniker": "AdminPanel.Frontend\\Repositories\\AboutRepository.cs",
@@ -311,19 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "AdminPanel.Frontend\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\appsettings.Development.json",
-              "RelativeToolTip": "AdminPanel.Frontend\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-14T12:46:18.116Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Components\\_Imports.razor",
               "RelativeDocumentMoniker": "AdminPanel.Frontend\\Components\\_Imports.razor",
@@ -335,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Daniel .NET22\\Desktop\\Examensarbete\\AdminPanel\\AdminPanel.Frontend\\Program.cs",
               "RelativeDocumentMoniker": "AdminPanel.Frontend\\Program.cs",

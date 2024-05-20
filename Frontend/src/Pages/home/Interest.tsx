@@ -1,4 +1,5 @@
 import InterestModel from "../../Interfaces/models/InterestModel";
+import "../../style/languageInterest.scss"
 
 interface IInterest {
     interest : InterestModel
@@ -6,7 +7,7 @@ interface IInterest {
 
 const Interest = ({interest} : IInterest) => {
     return(
-        <div className="interst">
+        <div className="interest">
             <p>{interest.name}</p>
         </div>
     )

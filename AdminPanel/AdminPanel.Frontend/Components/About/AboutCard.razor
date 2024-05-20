@@ -51,7 +51,7 @@
             <label>
                 Interests:
                 <div class="display-interests d-flex flex-row">
-                        @foreach (var interests in About.Interessts)
+                        @foreach (var interests in About.Interests)
                         {
                             <div class="interest interest-@interests.Id me-2" @onclick="() => DeleteInterest(interests.Id)">
                                 <p class="border border-danger rounded-2 p-2">@interests.Name</p>

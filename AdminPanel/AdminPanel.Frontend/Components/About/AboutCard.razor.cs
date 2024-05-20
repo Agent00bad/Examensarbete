@@ -58,14 +58,14 @@ namespace AdminPanel.Frontend.Components.About
             if(CreateInterestModel.Name != string.Empty)
             {
             var interest = await InterestRepo.CreateAsync(CreateInterestModel);
-            if (interest != null) About.Interessts?.Add(interest);
+            if (interest != null) About.Interests?.Add(interest);
             CreateInterestModel.Name = "";
             }
         }
         public async Task DeleteInterest(int id)
         {
             var deletedInterest = await InterestRepo.DeleteByIdAsync(id);
-            if (deletedInterest != null) About.Interessts?.Remove(deletedInterest);
+            if (deletedInterest != null) About.Interests?.Remove(deletedInterest);
         }
         
     }

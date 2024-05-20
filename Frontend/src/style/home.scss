@@ -31,9 +31,10 @@
         display: flex;
         flex-direction: column;
     }
-    .languages{
+    .languages, .interests{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         padding: 5px;
         margin: 10px;
     }
