@@ -18,7 +18,7 @@ const Header = () => {
                 <div className="nav-div">
                     <ul className="nav-links">
                         {links.map((nav, index) => {return(
-                            <li className={"link link-" + {index}}>
+                            <li className={"link link-" + {index}} key={index}>
                                 <a href={nav.Path}>{nav.Icon != undefined 
                                 ? nav.Icon.ExternalUri
                                 // TODO: better implementation of external icon

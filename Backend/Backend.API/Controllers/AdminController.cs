@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Backend.API.Controllers
 {
     //TODO: Implement a login admin system, either manually and change the repository and access levels or with auth0 or the like
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class AdminController : CvControllerTemplate<AdminDTO>
     {

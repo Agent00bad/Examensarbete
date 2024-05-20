@@ -1,24 +1,24 @@
 export default interface AboutModel {
-    Id: number;
-    FirstName: string;
-    LastName: string;
-    MiddleName?: string;
-    BirthDate: Date;
-    Description?: string;
-    ImageUri?: string; 
-    Languages?: Array<LanguageModel>;
-    Interests?: Array<InterestModel>;
+    id: number;
+    firstName: string;
+    lastName: string;
+    middleName?: string;
+    birthDate: Date;
+    description?: string;
+    imageUri?: string; 
+    languages?: Array<LanguageModel>;
+    interests?: Array<InterestModel>;
 }
 
 interface LanguageModel {
-    Id: string;
-    Name: string;
-    Level?: LanguageLevel;
+    id: string;
+    name: string;
+    level?: LanguageLevel;
 }
 interface InterestModel{
-    Id: string;
-    Name: string;
-    Description?: string;
+    id: string;
+    name: string;
+    description?: string;
 }
 enum LanguageLevel{
     Beginner,
