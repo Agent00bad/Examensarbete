@@ -62,11 +62,28 @@ My repositories derived from a ``IRepository`` class which i dependency injected
 ## Admin Portal
 I wanted to make the admin portal as a desktop or multi platform application in something like either Avalonia Ui or React native, but since i didn't have the most experience in it and only had 2 days to make a basic admin panel if i was gonna create a decent frontend too i decided to go with using [Blazor](#tools-used) and make it a web service for the time, planing to go back and also make it into a multi platform application after graduation.
 
-I started by making a generic repository interface and base abstract class for quicker implementation, because of the time constraints and for better readability and to not reuse code, called ``IRepository`` and ``RepositoryBase``. I then started made repositories implementing the ``RepositoryBase`` that inherited from ``IRepository``.  For the admin panel i used [Bootstrap](#tools-used) for styling and also some of [Blazors](#tools-used) pre-implemented styling. I started by making the page for *about* information like first and last name, age and languages talked. I then decided to start working on the [frontend](#frontend) parallel to the admin panel with the help of the seed data from the [API](#backend).
+I started by making a generic repository interface and base abstract class for quicker implementation, because of the time constraints and for better readability and to not reuse code, called ``IRepository`` and ``RepositoryBase``. I then started made repositories implementing the ``RepositoryBase`` that inherited from ``IRepository``.  For the admin panel i used [Bootstrap](#tools-used) for styling and also some of [Blazors](#tools-used) pre-implemented styling. I started by making the page for *about* information like first and last name, age and languages talked. I then decided to start working on the [frontend](#frontend) with the help of the API seed data since there was only 2 days left until it had to be finished so i could show all my endpoints worked.
+
+Below is a picture of how the first layout of the admin panel:
+
+![Picture of the first layout](./README_Pictures/AdminPanel/firstLayotu.png)
 
 ## Frontend
-The frontend is a vite react typescript application using react routing for route management. If there was more time a design would have been drawn up in something like figma but at this rate there will have to be improvised on the website and after examination a better look can be implemented.
+The frontend is a *vite react typescript* application using react routing for route management. If there was more time a design would have been drawn up in something like figma but with the remaining time being 2 days the look had to be improvised during development and after examination a better look can be drawn up and implemented. Each rout has it's own page divided into a map structure based on the path it is connected too except for the home page which is the standard/index path at ``/`` and the header and footer pages since they will be displayed at all paths. Because of the time constraint i was only able to get the basic user information up on the front page to showcase that the API connection works and a basic, but not the prettiest, style. 
+<details><summary>Page folder structure</summary> 
+
+![Pages folder structure](./README_Pictures/Frontend/PageMapStructure.png) 
+
+</details>
+
+Since the application is still in development it is connected to the API through a proxy through vite config to circumvent CORS during development. Below is a picture of about tables and it's relational data being displayed with the APIs seed data displayed.
+
+![First style of the frontend](./README_Pictures/Frontend/FirstStyle.png)
+
 ## Conclusion/Result
+
+This application is something i've wanted to create for some time now do demonstrate my knowledge and skills and i went into it with a lot of planing but in the end i underestimated the task and it was more work then i thought it would be. In the beginning i started learning about tools like docker and how to use a Linux server and set it up with a proxy to display ports on the internet like nginx and Cady which took around 2 weeks. That is when i realized i had to make some tangible results to showcase and therefore i created the full API in 1 week so all endpoints worked with CRUD and for the admin panel and frontend i divided the last week leaving one day to create the report. What i have in now is a product that has all endpoints and logic configured as a viable minimum product where all essential features work. I still need to display and style all data in a good way on the frontend and the admin panel needs more pages to edit more data but the foundation for implementing these things pretty fast is already there. What i would change in my approach in higndsight is probably spend more time on design of the frontend before i started and less time on docker and deployment on a private server since it took up so much time so i could have created more pages for both the frontend and Admin panel. But through good use of polymorphism with generic abstract classes and interfaces i was able to implement many features pretty rapidly in both the backend API and the admin panel instead of doing it manually for every endpoint. In the end i am happy with the end result since even if it isn't the full product it is a solid and good base to build upon and a lot of it is more or less repeating the same steps to show difirent data in the same way on diffirent pages on the frontend and add the CRUD operations to the remaining endpoints through the API. Something crucial that is not implemented yet that is needed before it reached the state of a minimally viable product is authentication and authorization which i'm gonna implement with the help of Auth0 before production.ss
+
 ## Tools Used
 
 >This section explains the different tools used such as frameworks, languages, programs and so on. By expanding the details tabs you can read how the technology was used in the project.
@@ -110,3 +127,5 @@ The frontend is a vite react typescript application using react routing for rout
   [Vite]: https://vitejs.dev/
 
   [react-routing]: https://reactrouter.com/en/main
+
+  [Cady]: https://caddyserver.com/
